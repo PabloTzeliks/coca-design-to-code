@@ -1,0 +1,24 @@
+:root {
+
+    --background-color: #FFF;
+    --background-ourwork: #22252C;
+    --background-footer: #F5F5F5;
+
+    --button-color: #101010;
+    
+    --text-black-color: #000;
+    --text-white-color: #FFF;
+    --text-gray-color: #757B8A;
+    --text-blue-color: #2A85FF;
+    --text-link-color: #2282A1;
+    --tittle-color: #101010;
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}

@@ -1,3 +1,5 @@
+/* Variáveis CSS */
+
 :root {
 
     --background-color: #FFF;
@@ -13,12 +15,157 @@
     --text-link-color: #2282A1;
     --tittle-color: #101010;
 
+    --poppins-font: 'Poppins', sans-serif;
+    --inter-font: 'Inter', sans-serif;
+
 }
+
+/* Configurações Estruturação Inicial */
 
 * {
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: var(--poppins-font);
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    background-color: var(--background-color);
+    color: var(--text-black-color);
+
+}
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+ul li {
+
+    list-style: none;
+
+}
+
+.container {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0.8rem auto; /* Aproximado */
+
+}
+
+/* Header */
+
+.header-inner {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.2rem;
+
+}
+
+.logo {
+
+    padding-left: 1px;
+
+}
+
+.menu-mobile {
+
+    display: block;
+
+}
+
+#menu-toggle {
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    padding-top: 4px;
+    padding-right: 1px;
+
+}
+
+.menu-desktop {
+
+    display: none;
+
+}
+
+/* Hero */
+
+.hero {
+
+    margin-bottom: 4.4rem;
+
+}
+
+.hero-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+
+}
+
+.hero-content h1 {
+
+    font-size: 3.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.16rem;
+
+    padding-left: 0.35rem;
+    
+    margin-bottom: 1.6rem;
+
+}
+
+.hero-content p {
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.88;
+
+    padding-left: 0.29rem;
+    margin-bottom: 2rem;
+    max-width: 97%;
+
+}
+
+/* About Us */
+
+.about-us {
+
+
+
+}
+
+.about-us-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
 
 }

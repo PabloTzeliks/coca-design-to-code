@@ -53,7 +53,8 @@ ul li {
 
 .container {
     width: min(87%, 1200px);
-    margin: 1rem auto; /* Aproximado */
+    margin: 1rem auto;
+    padding-inline: 0;
 }
 
 .container-wide {
@@ -212,7 +213,7 @@ ul li {
 }
 
 .office-text {
-    margin-bottom: 7.8rem;
+    margin-bottom: 7.6rem;
     width: 105%;
 
 }
@@ -244,8 +245,7 @@ ul li {
 
     background-color: var(--background-ourwork);
     color: var(--text-white-color);
-    padding: 4.2rem 0;
-
+    padding: 4.4rem 0;
 }
 
 .ourwork-content {
@@ -254,6 +254,7 @@ ul li {
     align-items: flex-start;
     justify-content: flex-start;
     text-align: start;;
+    margin-bottom: calc(3rem + 7vw);
 }
 
 .ourwork-content h2 {
@@ -269,14 +270,14 @@ ul li {
     font-weight: 300;
     line-height: 1.8;
     letter-spacing: +0.005rem;
-    margin-bottom: 2.3rem;
+    margin-bottom: calc(1.1rem + 3.5vw);
 }
 
 /* Botões padronizados da Seção */
 .ourwork-link, .workitem-link {
   display: inline-flex;
   align-items: center;
-  gap: .6rem;
+  gap: 1rem;
   position: relative;
 }
 
@@ -305,7 +306,6 @@ ul li {
   display: grid;
   grid-template-columns: 1fr; /* mobile: 1 coluna */
   gap: 2.4rem;
-  margin-top: 2rem;
 }
 
 /* Cards */
@@ -313,6 +313,15 @@ ul li {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+}
+
+/* Apenas para o Segundo Item do Mobile */
+.work-item.size-b {
+    margin-top: calc(0.5rem + 2.4vw);
+}
+
+.work-item .desktop--only {
+    margin-top: calc(3rem + 2.5vw);
 }
 
 .work-item picture {
@@ -326,10 +335,11 @@ ul li {
 }
 
 .work-item-text h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.25;
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.6;
   margin-bottom: .6rem;
+  margin-bottom: 2rem;
 }
 
 .media-item {
@@ -349,7 +359,7 @@ ul li {
 
 /* Proporção imagens */
 .work-item.size-a .media-item { aspect-ratio: 2.33 / 3; } /* Tentativa de ajuste fino entre proporções das imagens, mesmo com diferentes viewports */
-.work-item.size-b .media-item { aspect-ratio: 4 / 4.1; }
+.work-item.size-b .media-item { aspect-ratio: 4 / 4.15; }
 
 /* 
 
@@ -378,3 +388,93 @@ ul li {
   }
 
 */
+
+/* Seção Testimonials */
+
+.testimonials {
+  background: var(--bg);
+  color: var(--text);
+  padding: calc(3.5rem + 5vw) 0;
+}
+
+.testimonials-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* LEFT: título + lead */
+.testimonials-title {
+  font-weight: 700;
+  font-size: clamp(2rem, 5.5vw, 4rem); /* escalável */
+  line-height: 1;
+  margin: 0 0 1.25rem 0;
+}
+
+.testimonials-lead {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(.95rem, 2.2vw, 1.125rem);
+  line-height: 1.75;
+  max-width: 60ch; /* manter linhas legíveis */
+}
+
+/* RIGHT: testimonial card */
+.testimonial-card {
+  position: relative;
+  background: transparent;
+  padding: 0; /* conteúdo já alinhado */
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* quote mark - mobile: pequena e inline acima do texto */
+.quote-mark {
+  width: 32px;
+  height: auto;
+  display: block;
+}
+
+/* o texto do depoimento */
+.testimonial-text {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--text);
+  /* opicional: largura controlada para leitura */
+  max-width: 48ch;
+}
+
+/* author box */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .25rem;
+}
+
+.author-avatar{
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f3f4f6;
+  padding: 2px; /* opcional borda "círculo interno" */
+}
+
+.author-name {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.author-role {
+  margin: 0;
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+.author-link { color: var(--accent); text-decoration: none; }

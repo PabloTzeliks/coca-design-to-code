@@ -1,418 +1,465 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Coke</title>
 
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/styles.css" />
 
     <!-- Fonte Poppins e Inter importação via Google Fonts -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-
-        <div class="header-inner container-wide">
-
-            <div class="logo">
-
-                <a href="#"><img src="/resources/icons/logo-coca.svg" alt="Logo"></a>
-
-            </div>
-
-            <nav class="menu"> <!-- ANALISAR NECESSIDADE -->
-
-                <div class="menu-mobile"> <!-- ANALISAR NECESSIDADE -->
-
-                    <button id="menu-toggle" onclick="toggleMenu()" aria-label="Open mobile menu"><img src="/resources/icons/hamburguer-menu.svg" alt="Button Toggle"></button>
-
-                </div>
-
-                <div class="menu-desktop">
-
-                    <div class="menu-desktop left">
-
-                        <a href="#">About</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Contact</a>
-
-                    </div>
-
-                    <div class="menu-desktop right">
-
-                        <a href="#">Sign In</a>
-
-                    </div>
-                </div>
-            </nav>
+      <div class="header-inner container-wide">
+        <div class="logo">
+          <a href="#"
+            ><img src="/resources/icons/logo-coca.svg" alt="Logo"
+          /></a>
         </div>
 
+        <nav class="menu">
+          <!-- ANALISAR NECESSIDADE -->
+
+          <div class="menu-mobile">
+            <!-- ANALISAR NECESSIDADE -->
+
+            <button
+              id="menu-toggle"
+              onclick="toggleMenu()"
+              aria-label="Open mobile menu"
+            >
+              <img
+                src="/resources/icons/hamburguer-menu.svg"
+                alt="Button Toggle"
+              />
+            </button>
+          </div>
+
+          <div class="menu-desktop">
+            <div class="menu-desktop left">
+              <a href="#">About</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+            </div>
+
+            <div class="menu-desktop right">
+              <a href="#">Sign In</a>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="title">Analytic Decisioning</h1>
 
-        <section class="hero">
+            <p>
+              A decisioning platform can help you make better decisions by
+              allowing you to analyze your options with data that is easily
+              accessible
+            </p>
+          </div>
+        </div>
 
-            <div class="container">
+        <div class="hero-video container-wide">
+          <picture>
+            <!-- Imagem para desktop -->
+            <source
+              media="(min-width: 1024px)"
+              srcset="/resources/images/desktop-version/video-hero-desktop.png"
+            />
+            <!-- Imagem para mobile -->
+            <img
+              src="/resources/images/mobile-version/video-hero-mobile.png"
+              alt="Video of Coca Agency"
+              id="video-hero"
+            />
+          </picture>
+        </div>
+      </section>
 
-                <div class="hero-content">
+      <section class="container">
+        <div class="aboutus">
+          <div class="aboutus-content">
+            <div class="introduction">
+              <h2>
+                The analytic tools available on decisioning platforms can help
+                you identify trends
+              </h2>
 
-                    <h1 class="title">Analytic Decisioning</h1>
+              <p>
+                Analytics is a lot more than just spreadsheets and charts—it's
+                about making sense of the data you have.
+              </p>
+            </div>
 
-                    <p>A decisioning platform can help you make better decisions by allowing you to analyze your options with data that is easily accessible</p>
+            <div class="about-office">
+              <div class="aboutus-link">
+                <a href="#" class="main-btn">Learn more</a>
 
+                <img
+                  src="resources/icons/arrow-up-right-blue.svg"
+                  alt="Arrow Right Icon"
+                />
+              </div>
+
+              <div class="office-image">
+                <img
+                  src="/resources/images/mobile-version/office-image.png"
+                  alt="Coca Agency Office"
+                />
+              </div>
+
+              <div class="office-text">
+                <p>Our office is always open to having you anytime</p>
+              </div>
+
+              <div class="title-list">
+                <h3>Trusted by great companies</h3>
+              </div>
+            </div>
+
+            <!-- Dividindo as Logos -->
+
+            <div class="companies-list">
+              <div class="company-item">
+                <img
+                  src="/resources/images/mobile-version/logo-canon.png"
+                  alt="Company Canon Logo"
+                />
+              </div>
+
+              <div class="company-item">
+                <img
+                  src="/resources/images/mobile-version/logo-unilever.png"
+                  alt="Company Unilever Logo"
+                />
+              </div>
+
+              <div class="company-item">
+                <img
+                  src="/resources/images/mobile-version/cocacola-logo.png"
+                  alt="Company Coca Cola Logo"
+                />
+              </div>
+
+              <div class="company-item">
+                <img
+                  src="/resources/images/mobile-version/lenovo-logo.png"
+                  alt="Company Lenovo Logo"
+                />
+              </div>
+
+              <div class="company-item">
+                <img
+                  src="/resources/images/mobile-version/microsoft-logo.png"
+                  alt="Company Microsoft Logo"
+                />
+              </div>
+
+              <div class="company-item">
+                <img
+                  src="/resources/images/mobile-version/amazon-logo.png"
+                  alt="Company Amazon Logo"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ourwork">
+        <div class="container">
+          <div class="ourwork-content">
+            <h2>Explore What We Have Done</h2>
+
+            <p>
+              Decisioning platforms can help you make decisions faster than ever
+              before—and often with less effort—by giving you access to all of
+              your current data in one place so that it's easy to find what you
+              need when it's needed most!
+            </p>
+
+            <div class="ourwork-link">
+              <a href="#" class="main-btn-white">See Our Work</a>
+
+              <img
+                src="resources/icons/arrow-up-right-blue.svg"
+                alt="Arrow Right Icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Dividindo os Itens da Section Our Work -->
+
+        <div class="our-work-grid container-wide">
+          <!-- Card 1 -->
+          <article class="work-item size-a">
+            <div class="media-item">
+              <picture>
+                <source
+                  media="(min-width:1024px)"
+                  srcset="
+                    resources/images/desktop-version/item-desktop-ourwork-left.png
+                  "
+                />
+                <img
+                  src="resources/images/mobile-version/ourwork-image1.png"
+                  alt="Um cliente usando celular"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+
+            <div class="work-item-text">
+              <h3>Understanding and Discovering What the Data Means</h3>
+
+              <div class="workitem-link">
+                <a href="#" class="main-btn-white">Learn more</a>
+
+                <img
+                  src="resources/icons/arrow-up-right-blue.svg"
+                  alt="Arrow Right Icon"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="work-item size-b">
+            <div class="media-item">
+              <picture>
+                <source
+                  media="(min-width:1024px)"
+                  srcset="
+                    resources/images/desktop-version/item-desktop-ourwork-right.png
+                  "
+                />
+                <img
+                  src="resources/images/mobile-version/ourwork-image2.png"
+                  alt="Visualizador de métricas"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+
+            <div class="work-item-text">
+              <h3>Taking Action on the Data and Gathering the Data</h3>
+
+              <div class="workitem-link">
+                <a href="#" class="main-btn-white">Learn more</a>
+
+                <img
+                  src="resources/icons/arrow-up-right-blue.svg"
+                  alt="Arrow Right Icon"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="work-item desktop--only size-b">
+            <!-- Itens presentes únicos do Desktop, não aparecem no Mobile -->
+
+            <div class="media-item">
+              <img
+                src="resources/images/desktop-version/item-desktop-ourwork-left.png"
+                alt=""
+              />
+            </div>
+
+            <div class="work-item-text">
+              <h3>Taking Action on the Data and Gathering the Data</h3>
+
+              <div class="workitem-link">
+                <a href="#" class="main-btn-white">Learn more</a>
+
+                <img
+                  src="resources/icons/arrow-up-right-blue.svg"
+                  alt="Arrow Right Icon"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="work-item desktop--only size-a">
+            <div class="media-item">
+              <img
+                src="resources/images/desktop-version/item-desktop-ourwork-right.png"
+                alt=""
+              />
+            </div>
+
+            <div class="work-item-text">
+              <h3>Taking Action on the Data and Gathering the Data</h3>
+
+              <div class="workitem-link">
+                <a href="#" class="main-btn-white">Learn more</a>
+
+                <img
+                  src="resources/icons/arrow-up-right-blue.svg"
+                  alt="Arrow Right Icon"
+                />
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <div class="testimonials-inner">
+
+            <!-- Coluna da esquerda -->
+            <div class="testimonials-left">
+              <h2 class="testimonials-title">Why Coca Agency?</h2>
+              <p class="testimonials-lead">
+                Decisioning platforms are designed specifically for business
+                professionals like yourself who need to be able to make
+                decisions quickly while still maintaining high levels of
+                accuracy, security, and efficiency when doing so
+              </p>
+            </div>
+
+            <!-- Coluna da Direita -->
+            <aside
+              class="testimonial-card"
+              aria-labelledby="testimonial-heading"
+            >
+              <!-- Elemento de Aspas -->
+              <img
+                src="/resources/icons/quotes.svg"
+                alt=""
+                class="quote-mark"
+                aria-hidden="true"
+              />
+
+              <!-- Testemunho -->
+              <p id="testimonial-heading" class="testimonial-text">
+                Coca It's not just for data scientists! Analytics is for
+                everyone from executives to marketers to salespeople. More than
+                half of our customers say that analytics has helped them improve
+                their decision-making.
+              </p>
+
+              <div class="testimonial-author">
+                <img
+                  src="/resources/images/mobile-version/senior-director.png"
+                  alt="Photo of Anthony Klok"
+                  class="author-avatar"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <h3 class="author-name">Anthony Klok</h3>
+                  <p class="author-role">
+                    Senior Director of Engineering at
+                    <a href="#" class="author-link">Sans Brothers</a>
+                  </p>
                 </div>
-            </div>
-
-            <div class="hero-video container-wide">
-                <picture>
-                    <!-- Imagem para desktop -->
-                    <source media="(min-width: 1024px)" 
-                        srcset="/resources/images/desktop-version/video-hero-desktop.png">
-                    <!-- Imagem para mobile -->
-                    <img src="/resources/images/mobile-version/video-hero-mobile.png" 
-                        alt="Video of Coca Agency" id="video-hero">
-                </picture>
-            </div>
-        </section>
-
-        <section class="container">
-
-            <div class="aboutus">
-
-                <div class="aboutus-content">
-
-                    <div class="introduction">
-
-                        <h2>The analytic tools available on decisioning platforms can help you identify trends</h2>
-
-                        <p>Analytics is a lot more than just spreadsheets and charts—it's about making sense of the data you have.</p>
-
-                    </div>
-
-                    <div class="about-office">
-
-                        <div class="aboutus-link">
-
-                            <a href="#" class="main-btn">Learn more</a>
-
-                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
-
-                        </div>
-
-                        <div class="office-image">
-
-                            <img src="/resources/images/mobile-version/office-image.png" alt="Coca Agency Office">
-
-                        </div>
-
-                        <div class="office-text">
-
-                            <p>Our office is always open to having you anytime</p>
-
-                        </div>
-
-                        <div class="title-list">
-
-                            <h3>Trusted by great companies</h3>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Dividindo as Logos -->
-
-                    <div class="companies-list">
-
-                        <div class="company-item">
-
-                            <img src="/resources/images/mobile-version/logo-canon.png" alt="Company Canon Logo">
-
-                        </div>
-
-                        <div class="company-item">
-
-                            <img src="/resources/images/mobile-version/logo-unilever.png" alt="Company Unilever Logo">
-
-                        </div>
-
-                        <div class="company-item">
-
-                            <img src="/resources/images/mobile-version/cocacola-logo.png" alt="Company Coca Cola Logo">
-
-                        </div>
-
-                        <div class="company-item">
-
-                            <img src="/resources/images/mobile-version/lenovo-logo.png" alt="Company Lenovo Logo">
-
-                        </div>
-
-                        <div class="company-item">
-
-                            <img src="/resources/images/mobile-version/microsoft-logo.png" alt="Company Microsoft Logo">
-
-                        </div>
-
-                        <div class="company-item">
-
-                            <img src="/resources/images/mobile-version/amazon-logo.png" alt="Company Amazon Logo">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="ourwork">
-
-            <div class="container">
-
-                <div class="ourwork-content">
-
-                    <h2>Explore What We Have Done</h2>
-
-                    <p>Decisioning platforms can help you make decisions faster than ever before—and often with less effort—by giving you access to all of your current data in one place so that it's easy to find what you need when it's needed most!</p>
-
-                    <div class="ourwork-link">
-
-                        <a href="#" class="main-btn-white">See Our Work</a>
-
-                        <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dividindo os Itens da Section Our Work -->
-
-            <div class="our-work-grid container-wide">
-
-                <!-- Card 1 -->
-                <article class="work-item size-a">
-
-                    <div class="media-item">
-                        <picture>
-                            <source media="(min-width:1024px)" srcset="resources/images/desktop-version/item-desktop-ourwork-left.png">
-                            <img src="resources/images/mobile-version/ourwork-image1.png"
-                                alt="Um cliente usando celular" loading="lazy">
-                        </picture>
-                    </div>
-
-                    <div class="work-item-text">
-
-                        <h3>Understanding and Discovering What the Data Means</h3>
-
-                        <div class="workitem-link">
-
-                            <a href="#" class="main-btn-white">Learn more</a>
-
-                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
-
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 2 -->
-                <article class="work-item size-b">
-
-                    <div class="media-item">
-                        <picture>
-                            <source media="(min-width:1024px)" srcset="resources/images/desktop-version/item-desktop-ourwork-right.png">
-                            <img src="resources/images/mobile-version/ourwork-image2.png"
-                                alt="Visualizador de métricas" loading="lazy">
-                        </picture>
-                    </div>
-
-
-                    <div class="work-item-text">
-
-                        <h3>Taking Action on the Data and Gathering the Data</h3>
-
-                        <div class="workitem-link">
-
-                            <a href="#" class="main-btn-white">Learn more</a>
-
-                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
-
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 3 -->
-                <article class="work-item desktop--only size-b"> <!-- Itens presentes únicos do Desktop, não aparecem no Mobile -->
-
-                    <div class="media-item">
-                        <img src="resources/images/desktop-version/item-desktop-ourwork-left.png" alt=""> 
-                    </div>
-
-                    <div class="work-item-text">
-
-                        <h3>Taking Action on the Data and Gathering the Data</h3>
-
-                        <div class="workitem-link">
-
-                            <a href="#" class="main-btn-white">Learn more</a>
-
-                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
-
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 4 -->
-                <article class="work-item desktop--only size-a">
-
-                    <div class="media-item">
-                        <img src="resources/images/desktop-version/item-desktop-ourwork-right.png" alt=""> 
-                    </div>
-
-                    <div class="work-item-text">
-
-                        <h3>Taking Action on the Data and Gathering the Data</h3>
-
-                        <div class="workitem-link">
-
-                            <a href="#" class="main-btn-white">Learn more</a>
-
-                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
-
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="container">
-
-            <div class="testimonials">
-
-                <div class="testimonials-content">
-
-                    <h2>Why Coca Agency?</h2>
-
-                    <p>Coca It's not just for data scientists! Analytics is for everyone from executives to marketers to salespeople. More than half of our customers say that analytics has helped them improve their decision-making.</p>
-
-                    <div class="testimonial-item">
-
-                        <img src="/resources/icons/quotes.svg" alt="Quotes Detail">
-
-                        <p>Coca It's not just for data scientists! Analytics is for everyone from executives to marketers to salespeople. More than half of our customers say that analytics has helped them improve their decision-making.</p>
-
-                    </div>
-
-                    <div class="important-person">
-
-                        <img src="/resources/images/mobile-version/senior-director.png" alt="Senior Director Image">
-
-                        <div class="important-person-text">
-
-                            <h3>Anthony Klok</h3>
-
-                            <p>Senior Director of Engineering at <a href="#">Sans Brothers</a></p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
+      <div class="container footer-inner">
+        <div class="get-started">
+          <img src="/resources/icons/logo-unica.svg" alt="Unique logo" />
 
-        <div class="container footer-inner">
+          <p>Ready to get started?</p>
 
-            <div class="get-started">
-
-                <img src="/resources/icons/logo-unica.svg" alt="Unique logo">
-
-                <p>Ready to get started?</p>
-
-                <a href="#" class="btn-getstarted">Get Started</a>
-
-            </div>
-
-            <div class="newsletter-subscribe">
-
-                <h3>Subscribe to our newsletter</h3>
-
-                <form class="email-form">
-                    <div class="input-group">
-                        <input 
-                            type="email" 
-                            placeholder="Email address" 
-                            class="email-input"
-                            required
-                        >
-                        <button type="submit" class="submit-button">
-                            <span class="arrow">></span>
-                        </button>
-                    </div>
-                </form>
-
-            </div>
-
-            <div class="footer-links">
-
-                <div class="footer-links-column">
-
-                    <ul>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Email Marketing</a></li>
-                        <li><a href="#">Campaigns</a></li>
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Offline</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links-column">
-
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Benefits</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links-column">
-
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="bottom-footer">
-
-                <div class="terms-policy">
-
-                    <p><a href="#">Terms & Conditions</a></p>
-                    <p><a href="#">Privacy Policy</a></p>
-                </div>
-
-                <div class="social-media">
-
-                    <a href="#"><img src="/resources/icons/facebook-logo-icon.svg" alt="Facebook Icon"></a>
-                    <a href="#"><img src="/resources/icons/twitter-logo-icon.svg" alt="Facebook Icon"></a>
-                    <a href="#"><img src="/resources/icons/instagram-logo-icon.svg" alt="Facebook Icon"></a>
-                </div>
-            </div>
+          <a href="#" class="btn-getstarted">Get Started</a>
         </div>
-    
+
+        <div class="newsletter-subscribe">
+          <h3>Subscribe to our newsletter</h3>
+
+          <form class="email-form">
+            <div class="input-group">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="email-input"
+                required
+              />
+              <button type="submit" class="submit-button">
+                <span class="arrow">></span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <ul>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Email Marketing</a></li>
+              <li><a href="#">Campaigns</a></li>
+              <li><a href="#">Branding</a></li>
+              <li><a href="#">Offline</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Benefits</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bottom-footer">
+          <div class="terms-policy">
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+          </div>
+
+          <div class="social-media">
+            <a href="#"
+              ><img
+                src="/resources/icons/facebook-logo-icon.svg"
+                alt="Facebook Icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="/resources/icons/twitter-logo-icon.svg"
+                alt="Facebook Icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="/resources/icons/instagram-logo-icon.svg"
+                alt="Facebook Icon"
+            /></a>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

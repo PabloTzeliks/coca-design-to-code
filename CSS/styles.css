@@ -56,11 +56,18 @@ ul li {
     margin: 1rem auto; /* Aproximado */
 }
 
+.container-wide {
+  width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: calc(0.7rem + 0.6vw);
+  padding: 0 min(5%, 60px);
+  box-sizing: border-box;
+}
+
 /* Header */
 
 .header-inner {
-    width: 90%;
-    margin: 1.1rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,7 +137,7 @@ ul li {
 .aboutus {
 
     margin-bottom: 3.3rem;
-    width: 105%;
+    width: 100%;
 
 }
 
@@ -143,7 +150,7 @@ ul li {
 }
 
 .introduction h2 { 
-    font-size: 2.45rem;
+    font-size: 2.44rem;
     font-weight: 600;
     line-height: 1.33;
     letter-spacing: -0.02rem;
@@ -175,9 +182,9 @@ ul li {
     gap: 0.7rem;
 }
 
-.main-btn-white {
+.main-btn {
     font-size: 1.22rem;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: -0.02rem;
 }
 
@@ -217,7 +224,7 @@ ul li {
 }
 
 .title-list {
-    font-size: 1.25rem;
+    font-size: 1.23rem;
     font-weight: 300; /* Peso da Fonte estranho */
     letter-spacing: -0.02rem;
 
@@ -262,34 +269,112 @@ ul li {
     font-weight: 300;
     line-height: 1.8;
     letter-spacing: +0.005rem;
-    margin-bottom: 2.4rem;
+    margin-bottom: 2.3rem;
 }
 
-.ourwork-link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 3rem;
-    gap: 0.95rem;
+/* Botões padronizados da Seção */
+.ourwork-link, .workitem-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  position: relative;
+}
+
+.ourwork-link::after, .workitem-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--background-color);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  border-radius: 1px;
 }
 
 .main-btn-white {
-    font-size: 1.25rem;
+    font-size: 1.24rem;
     font-weight: 400;
     letter-spacing: -0.02rem;
+    padding-left: 0.5vw;
 }
 
-.ourwork-link::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: var(--background-color);
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    border-radius: 1px;
+/* Grid de Itens da Seção */
 
+.our-work-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: 1 coluna */
+  gap: 2.4rem;
+  margin-top: 2rem;
 }
+
+/* Cards */
+.work-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.work-item picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-item img {
+  object-fit: cover;
+}
+
+.work-item-text h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: .6rem;
+}
+
+.media-item {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+.media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Itens do Desktop */
+.desktop--only { display: none; }
+
+/* Proporção imagens */
+.work-item.size-a .media-item { aspect-ratio: 2.33 / 3; } /* Tentativa de ajuste fino entre proporções das imagens, mesmo com diferentes viewports */
+.work-item.size-b .media-item { aspect-ratio: 4 / 4.1; }
+
+/* 
+
+@media (min-width: 768px) {
+  .our-work-grid { gap: 3rem; }
+}
+
+@media (min-width: 1024px) {
+  .our-work-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: start;
+  }
+  .container .ourwork-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  @media (min-width: 1440px) {
+  .our-work-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+*/

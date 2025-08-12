@@ -19,7 +19,7 @@
 
     <header>
 
-        <div class="header-inner">
+        <div class="header-inner container-wide">
 
             <div class="logo">
 
@@ -71,10 +71,15 @@
                 </div>
             </div>
 
-            <div class="hero-video">
-
-                <img src="/resources/images/mobile-version/video-hero-mobile.png" alt="Video of Coca Agency" id="video-hero">
-
+            <div class="hero-video container-wide">
+                <picture>
+                    <!-- Imagem para desktop -->
+                    <source media="(min-width: 1024px)" 
+                        srcset="/resources/images/desktop-version/video-hero-desktop.png">
+                    <!-- Imagem para mobile -->
+                    <img src="/resources/images/mobile-version/video-hero-mobile.png" 
+                        alt="Video of Coca Agency" id="video-hero">
+                </picture>
             </div>
         </section>
 
@@ -184,57 +189,106 @@
                         <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
 
                     </div>
-
-                    <!-- Dividindo os Itens da Section Our Work -->
-
-                    <div class="our-work-grid">
-
-                        <div class="work-item mobile--item"> <!-- Itens presentes no Desktop, porém únicos no Mobile -->
-
-                            <img src="resources/images/mobile-version/ourwork-image1.png" alt="">
-
-                            <div class="work-item-text">
-
-                                <h3>Understanding and Discovering What the Data Means</h3>
-
-                                <a href="#" class="btn-learnmore">Learn more</a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="work-item mobile--item">
-
-                            <img src="resources/images/mobile-version/ourwork-image2.png" alt=""> 
-
-                            <div class="work-item-text">
-
-                                <h3>Taking Action on the Data and Gathering the Data</h3>
-
-                                <a href="#" class="btn-learnmore">Learn more</a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="work-item desktop--item"> <!-- Itens presentes únicos do Desktop, não aparecem no Mobile -->
-
-
-
-                        </div>
-
-                        <div class="work-item desktop--item">
-
-
-
-                        </div>
-
-                    </div>
-
                 </div>
-
             </div>
 
+            <!-- Dividindo os Itens da Section Our Work -->
+
+            <div class="our-work-grid container-wide">
+
+                <!-- Card 1 -->
+                <article class="work-item size-a">
+
+                    <div class="media-item">
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="resources/images/desktop-version/item-desktop-ourwork-left.png">
+                            <img src="resources/images/mobile-version/ourwork-image1.png"
+                                alt="Um cliente usando celular" loading="lazy">
+                        </picture>
+                    </div>
+
+                    <div class="work-item-text">
+
+                        <h3>Understanding and Discovering What the Data Means</h3>
+
+                        <div class="workitem-link">
+
+                            <a href="#" class="main-btn-white">Learn more</a>
+
+                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="work-item size-b">
+
+                    <div class="media-item">
+                        <picture>
+                            <source media="(min-width:1024px)" srcset="resources/images/desktop-version/item-desktop-ourwork-right.png">
+                            <img src="resources/images/mobile-version/ourwork-image2.png"
+                                alt="Visualizador de métricas" loading="lazy">
+                        </picture>
+                    </div>
+
+
+                    <div class="work-item-text">
+
+                        <h3>Taking Action on the Data and Gathering the Data</h3>
+
+                        <div class="workitem-link">
+
+                            <a href="#" class="main-btn-white">Learn more</a>
+
+                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="work-item desktop--only size-b"> <!-- Itens presentes únicos do Desktop, não aparecem no Mobile -->
+
+                    <div class="media-item">
+                        <img src="resources/images/desktop-version/item-desktop-ourwork-left.png" alt=""> 
+                    </div>
+
+                    <div class="work-item-text">
+
+                        <h3>Taking Action on the Data and Gathering the Data</h3>
+
+                        <div class="workitem-link">
+
+                            <a href="#" class="main-btn-white">Learn more</a>
+
+                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="work-item desktop--only size-a">
+
+                    <div class="media-item">
+                        <img src="resources/images/desktop-version/item-desktop-ourwork-right.png" alt=""> 
+                    </div>
+
+                    <div class="work-item-text">
+
+                        <h3>Taking Action on the Data and Gathering the Data</h3>
+
+                        <div class="workitem-link">
+
+                            <a href="#" class="main-btn-white">Learn more</a>
+
+                            <img src="resources/icons/arrow-up-right-blue.svg" alt="Arrow Right Icon">
+
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="container">

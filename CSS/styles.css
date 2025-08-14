@@ -16,6 +16,18 @@
 
   --poppins-font: "Poppins", sans-serif;
   --inter-font: "Inter", sans-serif;
+
+  --fs-xxs: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem); /* ~12 - 14px */
+  --fs-xs: clamp(0.875rem, 0.85rem + 0.3vw, 1rem); /* ~14 - 16px */
+  --fs-sm: clamp(1rem, 0.98rem + 0.4vw, 1.125rem); /* ~16 - 18px (body) */
+  --fs-md: clamp(
+    1.125rem,
+    1.05rem + 0.8vw,
+    1.375rem
+  ); /* ~18 - 22px (subtitles) */
+  --fs-lg: clamp(1.5rem, 1.3rem + 1.6vw, 2.2rem); /* ~24 - 35px (big subs) */
+  --fs-xl: clamp(2rem, 1.9rem + 2.2vw, 3rem); /* ~32 - 48px (h2) */
+  --fs-xxl: clamp(3rem, 2.6rem + 3vw, 4.5rem); /* ~48 - 72px (hero h1) */
 }
 
 /* Configurações Estruturação Inicial */
@@ -59,8 +71,7 @@ ul li {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   margin-top: calc(0.7rem + 0.6vw);
-  padding: 0 min(5%, 60px);
-  padding-inline: (16px, calc((100vw - 1200px) / 2), 120px);
+  padding-inline: clamp(20px, calc((100vw - 1200px) / 2), 120px);
   box-sizing: border-box;
 }
 
@@ -104,7 +115,7 @@ ul li {
 }
 
 .hero-content h1 {
-  font-size: clamp(3.7rem, 3rem + 2vw, 4.5rem);
+  font-size: clamp(3.7rem, calc(1.1297rem + 10.967vw), 11rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.16rem;
@@ -140,7 +151,7 @@ ul li {
 }
 
 .introduction h2 {
-  font-size: 2.44rem;
+  font-size: clamp(2.44rem, calc(1.785rem + 2.793vw), 4.3rem);
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: -0.02rem;
@@ -172,7 +183,7 @@ ul li {
 }
 
 .main-btn {
-  font-size: 1.22rem;
+  font-size: clamp(1.22rem, calc(1.1566rem + 0.2704vw), 1.4rem);
   font-weight: 500;
   letter-spacing: -0.02rem;
 }
@@ -199,11 +210,10 @@ ul li {
 
 .office-text {
   margin-bottom: 7.6rem;
-  width: 105%;
 }
 
 .office-text p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: -0.012rem;
 }
 
@@ -226,7 +236,7 @@ ul li {
 .ourwork {
   background-color: var(--background-ourwork);
   color: var(--text-white-color);
-  padding: 4.4rem 0;
+  padding: 4.35rem 0;
 }
 
 .ourwork-content {
@@ -239,7 +249,7 @@ ul li {
 }
 
 .ourwork-content h2 {
-  font-size: 2.45rem;
+  font-size: clamp(2.45rem, calc(1.7987rem + 2.7789vw), 4.3rem);
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: -0.02rem;
@@ -251,7 +261,7 @@ ul li {
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: +0.005rem;
-  margin-bottom: calc(1.1rem + 3.5vw);
+  margin-bottom: calc(1.2rem + 4vw);
 }
 
 /* Botões padronizados da Seção */
@@ -277,7 +287,7 @@ ul li {
 }
 
 .main-btn-white {
-  font-size: 1.24rem;
+  font-size: clamp(1.22rem, calc(1.1566rem + 0.2704vw), 1.4rem);
   font-weight: 400;
   letter-spacing: -0.02rem;
   padding-left: 0.5vw;
@@ -318,10 +328,9 @@ ul li {
 }
 
 .work-item-text h3 {
-  font-size: 1.12rem;
+  font-size: clamp(1.12rem, calc(0.78rem + 1.3216vw), 1.95rem);
   font-weight: 500;
   line-height: 1.6;
-  margin-bottom: 0.6rem;
   margin-bottom: 2rem;
 }
 
@@ -342,11 +351,10 @@ ul li {
   display: none;
 }
 
-/* Proporção imagens
+/* Proporção imagens */
 .work-item.size-a .media-item { aspect-ratio: 2.33 / 3; }
 .work-item.size-b .media-item { aspect-ratio: 4 / 4.15; }
 
-/*
 
 /* Seção Testimonials */
 
@@ -376,7 +384,7 @@ ul li {
   margin: 0;
   font-weight: 400;
   color: var(--text-black-color);
-  font-size: clamp(1.25rem, 2.7vw, 2.5rem);
+  font-size: 1.25rem;
   line-height: 1.8;
   max-width: 60ch;
 }
@@ -400,7 +408,7 @@ ul li {
 
 /* quote mark - mobile: pequena e inline acima do texto */
 .quote-mark {
-  width: 48px;
+  width: clamp(48px, calc(33.92px + 3.7547vw), 88px);
   height: auto;
   display: block;
 }
@@ -484,7 +492,7 @@ ul li {
 }
 .cta-text {
   margin: 0;
-  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-size: 1rem;
   font-weight: 500;
   color: var(--button-color);
 }
@@ -647,6 +655,10 @@ ul li {
 }
 
 @media (min-width: 1024px) {
+  .footer {
+    background-color: var(--background-footer);
+  }
+
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
@@ -657,10 +669,6 @@ ul li {
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-  }
-  .footer-logo {
-    width: 72px;
-    height: 72px;
   }
   .footer-rule {
     display: block;

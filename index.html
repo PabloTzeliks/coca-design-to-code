@@ -21,9 +21,22 @@
     <header>
       <div class="header-inner container-wide">
         <div class="logo">
-          <a href="#"
-            ><img src="/resources/icons/logo-coca.svg" alt="Logo"
-          /></a>
+          <a href="#">
+            <picture>
+              <!-- Imagem para desktop -->
+              <source
+                media="(min-width: 1024px)"
+                srcset="/resources/icons/logo-coca-desktop.svg"
+              />
+              <!-- Imagem para mobile -->
+              <img
+                src="/resources/icons/logo-coca.svg"
+                alt="Video of Coca Agency"
+                id="video-hero"
+              />
+            </picture>
+
+          </a>
         </div>
 
         <nav class="menu">
@@ -211,9 +224,9 @@
             <div class="media-item">
               <picture>
                 <source
-                  media="(min-width:1024px)"
+                  media="(min-width:768px)"
                   srcset="
-                    resources/images/desktop-version/item-desktop-ourwork-left.png
+                    resources/images/desktop-version/ourwork-image1.png
                   "
                 />
                 <img
@@ -243,9 +256,9 @@
             <div class="media-item">
               <picture>
                 <source
-                  media="(min-width:1024px)"
+                  media="(min-width:768px)"
                   srcset="
-                    resources/images/desktop-version/item-desktop-ourwork-right.png
+                    resources/images/desktop-version/ourwork-image2.png
                   "
                 />
                 <img

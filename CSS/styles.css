@@ -16,18 +16,6 @@
 
   --poppins-font: "Poppins", sans-serif;
   --inter-font: "Inter", sans-serif;
-
-  --fs-xxs: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem); /* ~12 - 14px */
-  --fs-xs: clamp(0.875rem, 0.85rem + 0.3vw, 1rem); /* ~14 - 16px */
-  --fs-sm: clamp(1rem, 0.98rem + 0.4vw, 1.125rem); /* ~16 - 18px (body) */
-  --fs-md: clamp(
-    1.125rem,
-    1.05rem + 0.8vw,
-    1.375rem
-  ); /* ~18 - 22px (subtitles) */
-  --fs-lg: clamp(1.5rem, 1.3rem + 1.6vw, 2.2rem); /* ~24 - 35px (big subs) */
-  --fs-xl: clamp(2rem, 1.9rem + 2.2vw, 3rem); /* ~32 - 48px (h2) */
-  --fs-xxl: clamp(3rem, 2.6rem + 3vw, 4.5rem); /* ~48 - 72px (hero h1) */
 }
 
 /* Configurações Estruturação Inicial */
@@ -62,7 +50,7 @@ ul li {
 
 .container {
   width: min(87%, 1200px);
-  margin: 1rem auto;
+  margin: calc(0.8rem + 4vw) auto;
   padding-inline: 0;
 }
 
@@ -351,10 +339,11 @@ ul li {
   display: none;
 }
 
-/* Proporção imagens */
+/* Proporção imagens
 .work-item.size-a .media-item { aspect-ratio: 2.33 / 3; }
 .work-item.size-b .media-item { aspect-ratio: 4 / 4.15; }
 
+*/
 
 /* Seção Testimonials */
 
@@ -613,16 +602,27 @@ ul li {
 
 /* RESPONSIVIDADE */
 
+/* About Us */
+@media (min-width: 768px) {
+  .companies-list {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+}
+
+/* Our Work */
 @media (min-width: 768px) {
   .our-work-grid {
     gap: 3rem;
   }
+
 }
 
 @media (min-width: 1024px) {
   .our-work-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    row-gap: 6.5rem;
     align-items: start;
   }
   .container .ourwork-content {
@@ -630,6 +630,18 @@ ul li {
     justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
+  }
+
+  .desktop--only {
+    display: block;
+  }
+
+  .work-item.size-b {
+    margin-top: 0; /* remove o espaçamento extra */
+  }
+
+  .desktop--only.size-a {
+    margin-top: -7.5rem; /* remove o espaçamento extra */
   }
 }
 
@@ -641,6 +653,7 @@ ul li {
   }
 }
 
+/* Testimonials */
 /* Desktop - deslocar aspas para esquerda */
 @media (min-width: 1024px) {
   .testimonial-content {
@@ -654,6 +667,7 @@ ul li {
   }
 }
 
+/* Footer */
 @media (min-width: 1024px) {
   .footer {
     background-color: var(--background-footer);

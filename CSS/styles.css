@@ -602,6 +602,98 @@ ul li {
 
 /* RESPONSIVIDADE */
 
+/* Header */
+
+@media (min-width: 1024px) {
+  .menu-mobile {
+    display: none;
+  }
+
+  .menu-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-desktop .left {
+    display: flex;
+  }
+
+  .menu-desktop .left a {
+    margin-right: 2rem;
+    font-weight: 500;
+  }
+
+  .menu-desktop .right a {
+    font-weight: 600;
+  }
+}
+
+/* Hero */
+
+@media (min-width: 1024px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 360px);
+    align-items: start;
+    width: min(87%, 1200px);
+  }
+
+  .hero-content {
+    display: contents;
+  }
+
+  /* H1: ocupa a coluna 1 */
+  .hero-content .title {
+    grid-column: 1 / 2;
+    align-self: start;
+    margin: 0;
+  }
+
+  .hero-content p {
+    grid-column: 2 / 3;
+    align-self: start;
+    max-width: none;
+  }
+
+  /* Se tiver a .hero-arrow (sugestão), posiciona logo abaixo do p na mesma coluna */
+  .hero-arrow {
+    grid-column: 2 / 3;
+    justify-self: start; /* alinha à esquerda da coluna direita */
+    align-self: start;
+    margin-top: 1.2rem;
+    display: block;
+  }
+
+  /* hero-video ocupa toda a largura do grid abaixo do conteúdo */
+  .hero-video {
+    grid-column: 1 / -1;
+    margin-top: clamp(2.2rem, 4vw, 4rem);
+  }
+
+  /* garante que a elipse de fundo e background não atrapalhem o texto */
+  .hero { overflow: visible; }
+}
+
+@media (min-width: 1440px) {
+  .hero .container {
+    grid-template-columns: 1fr minmax(320px, 30%);
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .hero-content .title {
+    letter-spacing: -0.5rem;
+    line-height: 0.95;
+  }
+
+  .hero-arrow {
+    margin-top: 1.6rem;
+  }
+
+  .hero-video { margin-top: 4.5rem; }
+}
+
+
 /* About Us */
 @media (min-width: 768px) {
   .companies-list {

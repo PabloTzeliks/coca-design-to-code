@@ -55,11 +55,8 @@ ul li {
 }
 
 .container-wide {
-  width: 100%;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  margin-top: calc(0.7rem + 0.6vw);
-  padding-inline: clamp(20px, calc((100vw - 1200px) / 2), 120px);
+  width: min(89%, 1200px);
+  margin: calc(0.7rem + 0.6vw) auto 0 auto;
   box-sizing: border-box;
 }
 
@@ -69,7 +66,6 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3.2rem;
 }
 
 .menu-mobile {
@@ -91,7 +87,7 @@ ul li {
 /* Hero */
 
 .hero {
-  margin-bottom: 4.2rem;
+  padding: 1.4rem 0;
 }
 
 .hero-content {
@@ -114,7 +110,6 @@ ul li {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.9;
-  margin-bottom: 0.8rem;
 }
 
 .hero-video {
@@ -126,7 +121,7 @@ ul li {
 /* About Us */
 
 .aboutus {
-  margin-bottom: 3.3rem;
+  padding: 1.3rem 0 1.8rem 0;
   width: 100%;
 }
 
@@ -157,7 +152,7 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 3.1rem;
+  margin-bottom: 2.3rem;
 }
 
 .aboutus-link {
@@ -197,7 +192,7 @@ ul li {
 }
 
 .office-text {
-  margin-bottom: 7.6rem;
+  margin-bottom: 8rem;
 }
 
 .office-text p {
@@ -224,7 +219,7 @@ ul li {
 .ourwork {
   background-color: var(--background-ourwork);
   color: var(--text-white-color);
-  padding: 4.35rem 0;
+  padding: 3.5rem 0 4.6rem 0;
 }
 
 .ourwork-content {
@@ -233,7 +228,7 @@ ul li {
   align-items: flex-start;
   justify-content: flex-start;
   text-align: start;
-  margin-bottom: calc(3rem + 7vw);
+  margin-bottom: calc(3rem + 6vw);
 }
 
 .ourwork-content h2 {
@@ -249,7 +244,7 @@ ul li {
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: +0.005rem;
-  margin-bottom: calc(1.2rem + 4vw);
+  margin-bottom: calc(1.5rem + 4.5vw);
 }
 
 /* Botões padronizados da Seção */
@@ -319,7 +314,7 @@ ul li {
   font-size: clamp(1.12rem, calc(0.78rem + 1.3216vw), 1.95rem);
   font-weight: 500;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: calc(1.5rem + 2vw);
 }
 
 .media-item {
@@ -350,7 +345,7 @@ ul li {
 .testimonials {
   background: var(--bg);
   color: var(--text);
-  padding: calc(3.15rem + 5vw) 0;
+  padding: calc(2.5rem + 4.5vw) 0;
 }
 
 .testimonials-inner {
@@ -476,7 +471,7 @@ ul li {
 .footer-cta {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.9rem;
   align-items: center;
 }
 .cta-text {
@@ -600,234 +595,182 @@ ul li {
   border: 0;
 }
 
-/* RESPONSIVIDADE */
-
-/* Header */
-
+/* A partir de 1025px, o wide se iguala ao padrão */
 @media (min-width: 1024px) {
-  .menu-mobile {
-    display: none;
-  }
-
-  .menu-desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .menu-desktop .left {
-    display: flex;
-  }
-
-  .menu-desktop .left a {
-    margin-right: 2rem;
-    font-weight: 500;
-  }
-
-  .menu-desktop .right a {
-    font-weight: 600;
-  }
-}
-
-/* Hero */
-
-@media (min-width: 1024px) {
-  .hero .container {
-    display: grid;
-    grid-template-columns: 1fr minmax(280px, 360px);
-    align-items: start;
+  .container-wide {
     width: min(87%, 1200px);
   }
-
-  .hero-content {
-    display: contents;
-  }
-
-  /* H1: ocupa a coluna 1 */
-  .hero-content .title {
-    grid-column: 1 / 2;
-    align-self: start;
-    margin: 0;
-  }
-
-  .hero-content p {
-    grid-column: 2 / 3;
-    align-self: start;
-    max-width: none;
-  }
-
-  /* Se tiver a .hero-arrow (sugestão), posiciona logo abaixo do p na mesma coluna */
-  .hero-arrow {
-    grid-column: 2 / 3;
-    justify-self: start; /* alinha à esquerda da coluna direita */
-    align-self: start;
-    margin-top: 1.2rem;
-    display: block;
-  }
-
-  /* hero-video ocupa toda a largura do grid abaixo do conteúdo */
-  .hero-video {
-    grid-column: 1 / -1;
-    margin-top: clamp(2.2rem, 4vw, 4rem);
-  }
-
-  /* garante que a elipse de fundo e background não atrapalhem o texto */
-  .hero { overflow: visible; }
 }
 
-@media (min-width: 1440px) {
-  .hero .container {
-    grid-template-columns: 1fr minmax(320px, 30%);
-    gap: clamp(2rem, 6vw, 5rem);
-  }
-
-  .hero-content .title {
-    letter-spacing: -0.5rem;
-    line-height: 0.95;
-  }
-
-  .hero-arrow {
-    margin-top: 1.6rem;
-  }
-
-  .hero-video { margin-top: 4.5rem; }
-}
-
-
-/* About Us */
+/* ------------------------------
+   TABLET (>= 768px)
+   ajustes leves: logos grid, increased gaps
+   ------------------------------ */
 @media (min-width: 768px) {
+
+  /* About / companies list: use auto-fit para ficar robusto */
   .companies-list {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     gap: 2rem;
   }
-}
 
-/* Our Work */
-@media (min-width: 768px) {
+  /* Our Work: mais gap em tablet */
   .our-work-grid {
     gap: 3rem;
   }
 
+  /* Outros ajustes de tipografia leves (exemplo) */
+  .introduction p,
+  .ourwork-content p {
+    line-height: 1.75;
+  }
 }
 
+/* ------------------------------
+   DESKTOP BASE (>= 1024px)
+   Aqui construímos o layout desktop "funcional"
+   ------------------------------ */
 @media (min-width: 1024px) {
-  .our-work-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 6.5rem;
-    align-items: start;
-  }
-  .container .ourwork-content {
+
+  /* ---------- HEADER: trocar menu mobile por desktop ---------- */
+  .menu-mobile { display: none; }
+  .menu-desktop {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
   }
+  .menu-desktop .left { display: flex; gap: 2rem; align-items: center; }
+  .menu-desktop .left a { margin-right: 0; font-weight: 500; }
+  .menu-desktop .right a { font-weight: 600; }
 
-  .desktop--only {
-    display: block;
-  }
-
-  .work-item.size-b {
-    margin-top: 0; /* remove o espaçamento extra */
-  }
-
-  .desktop--only.size-a {
-    margin-top: -7.5rem; /* remove o espaçamento extra */
-  }
-}
-
-@media (min-width: 1440px) {
-  .our-work-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
+  /* ---------- HERO: layout em grid 2-col (texto + media) ---------- */
+  .hero {
+    /* tornar a seção uma grid que alinha texto à esquerda e mídia à direita */
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 360px);
+    gap: clamp(1.6rem, 3vw, 3.5rem);
     align-items: start;
   }
-}
 
-/* Testimonials */
-/* Desktop - deslocar aspas para esquerda */
-@media (min-width: 1024px) {
-  .testimonial-content {
-    padding-left: 3rem; /* espaço para as aspas */
+  /* Não use display:contents — use grid placement */
+  .hero-content { display: block; }
+  .hero-content .title {
+    grid-column: 1 / 2;
+    align-self: start;
+    margin: 0 0 1rem 0;
+    /* letter-spacing provável: -0.05rem em vez de -0.5rem */
+    letter-spacing: -0.05rem;
+    line-height: 1.02;
   }
+  .hero-content p {
+    grid-column: 2 / 3;
+    align-self: start;
+    max-width: none;
+  }
+  .hero-arrow {
+    grid-column: 2 / 3;
+    justify-self: start;
+    margin-top: 1.2rem;
+    display: block;
+  }
+  .hero-video {
+    grid-column: 1 / -1; /* ocupa toda a largura abaixo do header do hero */
+    margin-top: clamp(2.2rem, 4vw, 4rem);
+  }
+  .hero { overflow: visible; }
+
+  /* ---------- OUR WORK: 2 col grid ---------- */
+  .our-work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+    row-gap: 6.5rem; /* maior espaçamento vertical por linha */
+    align-items: start;
+  }
+
+  /* Evitar margens negativas: controle vertical com grid gap e position se necessário */
+  .work-item.size-b { margin-top: 0; }
+  .desktop--only { display: block; }
+
+  /* Se você precisa deslocar visualmente um `.size-a` maior,
+     prefira usar margin-top negativo com cuidado só em um seletor específico
+     (ex.: .our-work-grid > .work-item:nth-child(3) { transform: translateY(...); }) */
+
+  /* ---------- TESTIMONIALS: aspas deslocada ---------- */
+  .testimonial-content { position: relative; padding-left: calc(var(--quote-w) + var(--quote-gap)); }
   .quote-mark {
     position: absolute;
     left: 0;
     top: 0;
-    transform: translateX(-100%); /* “fora” do texto */
-  }
-}
-
-/* Footer */
-@media (min-width: 1024px) {
-  .footer {
-    background-color: var(--background-footer);
+    width: var(--quote-w);
+    height: auto;
+    transform: translateX(-10%); /* ajuste fino */
+    aria-hidden: true;
   }
 
+  /* ---------- FOOTER: top row + main grid ---------- */
+  .footer { background-color: var(--background-footer); }
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
     padding: 3rem 0 1.5rem;
   }
-  .footer-cta {
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-  }
-  .footer-rule {
-    display: block;
-  }
+  .footer-cta { flex-direction: row; gap: 1rem; align-items: center; }
+  .footer-rule { display: block; }
 
   .footer-main {
-    /* newsletter + 3 colunas de links */
+    display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
     gap: 4rem;
     align-items: start;
     padding: 2rem 0 2.5rem;
   }
-  .footer-links {
-    display: contents; /* deixa cada .footer-col ocupar as colunas 2,3,4 */
-  }
-  .footer-col h4 {
-    margin: 0 0 0.9rem;
-    font-size: 1.05rem;
-    font-weight: 700;
-  }
-  .footer-col ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .footer-col li + li {
-    margin-top: 0.85rem;
-  }
-  .footer-col a {
-    color: var(--button-color);
-    text-decoration: none;
-  }
+  .footer-links { display: contents; } /* as colunas ocupam as 3 últimas colunas */
+  .footer-col h4 { margin: 0 0 .9rem; font-size: 1.05rem; font-weight: 700; }
+  .footer-col ul { margin: 0; padding: 0; list-style: none; }
+  .footer-col li + li { margin-top: .85rem; }
+  .footer-col a { color: var(--button-color); text-decoration: none; }
 
-  .newsletter-subscribe {
-    padding-right: 2rem;
-  } /* respira com as colunas */
+  .newsletter-subscribe { padding-right: 2rem; }
 
   .footer-bottom {
+    display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     padding: 2rem 0 3rem;
   }
-  .legal {
-    justify-content: flex-start;
-  }
-  .social {
-    justify-content: flex-end;
-  }
+  .legal { justify-content: flex-start; }
+  .social { justify-content: flex-end; }
 }
 
-/* ajuste fino para 1440px (opcional) */
+/* ------------------------------
+   DESKTOP FINAL (>= 1440px)
+   ajustes finos: gaps maiores, possíveis heights/aspect-ratio fixes para pixel-perfect
+   ------------------------------ */
 @media (min-width: 1440px) {
-  .footer-main {
-    gap: 5rem;
+
+  /* HERO: maior espaço para título e imagem */
+  .hero {
+    grid-template-columns: 1fr minmax(320px, 30%);
+    gap: clamp(2rem, 6vw, 5rem);
   }
+  .hero-content .title {
+    /* corrigir letter-spacing para um valor pequeno, não -0.5rem */
+    letter-spacing: -0.03rem;
+    line-height: 0.98;
+  }
+  .hero-arrow { margin-top: 1.6rem; }
+  .hero-video { margin-top: 4.5rem; }
+
+  /* OUR WORK: amplificar gap e (opcional) definir heights para casing pixel-perfect */
+  .our-work-grid { gap: 56px; }
+
+  /* Se quiser oferecer heights fixos só em 1440 para bater o mockup:
+     .work-item.size-a .media { height: 540px; aspect-ratio: auto; }
+     .work-item.size-b .media { height: 320px; aspect-ratio: auto; } */
+
+  .footer-main { gap: 5rem; }
 }

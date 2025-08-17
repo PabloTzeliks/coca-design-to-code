@@ -228,7 +228,7 @@ ul li {
   align-items: flex-start;
   justify-content: flex-start;
   text-align: start;
-  margin-bottom: calc(3rem + 6vw);
+  margin-bottom: calc(3.1rem + 6vw);
 }
 
 .ourwork-content h2 {
@@ -239,7 +239,7 @@ ul li {
   margin-bottom: 1.5rem;
 }
 
-.ourwork-content p {
+.mid-text {
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.8;
@@ -281,7 +281,7 @@ ul li {
 .our-work-grid {
   display: grid;
   grid-template-columns: 1fr; /* mobile: 1 coluna */
-  gap: 2.4rem;
+  gap: 2.5rem;
 }
 
 /* Cards */
@@ -308,6 +308,10 @@ ul li {
 
 .work-item img {
   object-fit: cover;
+}
+
+.work-item-text {
+  margin-top: 0;
 }
 
 .work-item-text h3 {
@@ -743,21 +747,57 @@ ul li {
   }
 
   /* ---------- OUR WORK: 2 col grid ---------- */
+
+  .ourwork {
+    padding: 3.5rem 0 0rem 0;
+  }
+
+  .ourwork-content {
+    margin-bottom: 2rem;
+  }
+
+  .ourwork-content h2 {
+    max-width: 12ch;
+    margin-bottom: 3rem;
+  }
+
+  .mid-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mid-text {
+    max-width: 55ch;
+    margin-bottom: 0;
+  }
+
   .our-work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
     gap: 3.5rem;
-    row-gap: 6.5rem; /* maior espaçamento vertical por linha */
+    row-gap: 7.5rem;
     align-items: start;
   }
 
-  /* Evitar margens negativas: controle vertical com grid gap e position se necessário */
-  .work-item.size-b { margin-top: 0; }
-  .desktop--only { display: block; }
+  .work-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1.8rem;
+  }
 
-  /* Se você precisa deslocar visualmente um `.size-a` maior,
-     prefira usar margin-top negativo com cuidado só em um seletor específico
-     (ex.: .our-work-grid > .work-item:nth-child(3) { transform: translateY(...); }) */
+  .work-item.size-b { margin-top: 0; }
+  .desktop--only { 
+    display: flex; 
+  }
+
+  .desktop--only.size-a {
+    margin-top: calc(-1.2rem - 9vw);
+  }
 
   /* ---------- TESTIMONIALS: aspas deslocada ---------- */
   .testimonial-content { position: relative; padding-left: calc(var(--quote-w) + var(--quote-gap)); }

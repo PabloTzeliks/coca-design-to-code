@@ -152,7 +152,6 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 2.3rem;
 }
 
 .aboutus-link {
@@ -204,6 +203,7 @@ ul li {
   font-size: 1.23rem;
   font-weight: 300; /* Peso da Fonte estranho */
   letter-spacing: -0.02rem;
+  margin-bottom: 2.3rem;
 }
 
 .companies-list {
@@ -639,7 +639,7 @@ ul li {
   .header-left {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: calc(2rem + 2vw);
   }
 
   .menu-desktop.left {
@@ -657,7 +657,7 @@ ul li {
   #about-link {
     color: var(--text-black-color);
     font-weight: 600;
- 1 }
+  }
 
   .menu-desktop.right {
     display: flex;
@@ -676,40 +676,71 @@ ul li {
   }
 
   /* ---------- HERO: layout em grid 2-col (texto + media) ---------- */
-  .hero {
-    /* tornar a seção uma grid que alinha texto à esquerda e mídia à direita */
-    display: grid;
-    grid-template-columns: 1fr minmax(280px, 360px);
-    gap: clamp(1.6rem, 3vw, 3.5rem);
+  .hero .hero-content {
     align-items: start;
+    width: 100%;
+    min-height: 1px; /* Evitar colapso */
+    position: relative;
+    overflow: visible;
   }
 
-  /* Não use display:contents — use grid placement */
-  .hero-content { display: block; }
-  .hero-content .title {
-    grid-column: 1 / 2;
-    align-self: start;
-    margin: 0 0 1rem 0;
-    /* letter-spacing provável: -0.05rem em vez de -0.5rem */
-    letter-spacing: -0.05rem;
-    line-height: 1.02;
+  .hero .hero-content h1 {
+    max-width: 100%;
+    z-index: 1;
   }
-  .hero-content p {
-    grid-column: 2 / 3;
-    align-self: start;
-    max-width: none;
+
+  .hero .hero-content p {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: min(40ch, 300px);
+    z-index: 2;
+    text-align: left;
+    transform: translateY(1rem);
   }
-  .hero-arrow {
-    grid-column: 2 / 3;
-    justify-self: start;
-    margin-top: 1.2rem;
-    display: block;
-  }
+
   .hero-video {
-    grid-column: 1 / -1; /* ocupa toda a largura abaixo do header do hero */
-    margin-top: clamp(2.2rem, 4vw, 4rem);
+    margin-top: -2rem;
+    width: calc(100vw - (1.2rem + 6.2vw)); /* Tentativa de deixar a imagem colada a direita (talvez não seja o ideal, mas foi o que consegui pensar) */
+    margin-right: 0;
   }
-  .hero { overflow: visible; }
+
+  /* About Us */
+
+  .aboutus {
+    padding: 3.5rem 0 5rem 0;
+  }
+
+  .introduction h2 {
+    max-width: 20ch;
+    margin-bottom: 3rem;
+  }
+
+  .introduction p {
+    max-width: 60ch;
+  }
+
+  .about-office {
+
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 10rem;
+
+  }
+
+  .office-text {
+    margin-bottom: 0;
+    margin-left: -2rem;
+  }
+
+  .office-image {
+    margin-bottom: 0;
+  }
+
+  .aboutus-link {
+    margin-bottom: 0;
+  }
 
   /* ---------- OUR WORK: 2 col grid ---------- */
   .our-work-grid {

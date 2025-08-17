@@ -595,7 +595,8 @@ ul li {
   border: 0;
 }
 
-/* A partir de 1025px, o wide se iguala ao padrão */
+/* RESPONSIVIDADE */
+
 @media (min-width: 1024px) {
   .container-wide {
     width: min(87%, 1200px);
@@ -620,7 +621,6 @@ ul li {
     gap: 3rem;
   }
 
-  /* Outros ajustes de tipografia leves (exemplo) */
   .introduction p,
   .ourwork-content p {
     line-height: 1.75;
@@ -635,15 +635,45 @@ ul li {
 
   /* ---------- HEADER: trocar menu mobile por desktop ---------- */
   .menu-mobile { display: none; }
-  .menu-desktop {
+
+  .header-left {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 3rem;
   }
-  .menu-desktop .left { display: flex; gap: 2rem; align-items: center; }
-  .menu-desktop .left a { margin-right: 0; font-weight: 500; }
-  .menu-desktop .right a { font-weight: 600; }
+
+  .menu-desktop.left {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .menu-desktop.left a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #757B8A;
+    text-decoration: none;
+  }
+
+  #about-link {
+    color: var(--text-black-color);
+    font-weight: 600;
+ 1 }
+
+  .menu-desktop.right {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-desktop.right a {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: var(--button-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
 
   /* ---------- HERO: layout em grid 2-col (texto + media) ---------- */
   .hero {

@@ -20,53 +20,63 @@
   <body>
     <header>
       <div class="header-inner container-wide">
-        <div class="logo">
-          <a href="#">
-            <picture>
-              <!-- Imagem para desktop -->
-              <source
-                media="(min-width: 1024px)"
-                srcset="/resources/icons/logo-coca-desktop.svg"
-              />
-              <!-- Imagem para mobile -->
-              <img
-                src="/resources/icons/logo-coca.svg"
-                alt="Video of Coca Agency"
-                id="video-hero"
-              />
-            </picture>
 
-          </a>
-        </div>
+        <div class="header-left">
 
-        <nav class="menu">
-
-          <div class="menu-mobile">
-
-            <button
-              id="menu-toggle"
-              onclick="toggleMenu()"
-              aria-label="Open mobile menu"
-            >
-              <img
-                src="/resources/icons/hamburguer-menu.svg"
-                alt="Button Toggle"
-              />
-            </button>
+          <div class="logo">
+            <a href="#">
+              <picture>
+                <!-- Imagem para desktop -->
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="/resources/icons/logo-coca-desktop.svg"
+                />
+                <!-- Imagem para mobile -->
+                <img
+                  src="/resources/icons/logo-coca.svg"
+                  alt="Video of Coca Agency"
+                  id="video-hero"
+                />
+              </picture>
+            </a>
           </div>
 
-          <div class="menu-desktop">
+          <nav>
+
             <div class="menu-desktop left">
-              <a href="#">About</a>
+              <a href="#" id="about-link">About</a>
               <a href="#">Blog</a>
               <a href="#">Contact</a>
             </div>
 
+          </nav>
+
+        </div>
+
+        <div class="header-right">
+
+          <nav>
+
+            <div class="menu-mobile">
+
+              <button
+                id="menu-toggle"
+                onclick="toggleMenu()"
+                aria-label="Open mobile menu"
+                >
+                <img
+                  src="/resources/icons/hamburguer-menu.svg"
+                  alt="Button Toggle"
+                />
+              </button>
+            </div>
+            
             <div class="menu-desktop right">
               <a href="#">Sign In</a>
             </div>
-          </div>
-        </nav>
+  
+          </nav>
+        </div>
       </div>
     </header>
 

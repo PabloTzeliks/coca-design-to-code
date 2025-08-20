@@ -829,30 +829,38 @@ ul li {
   
 
   /* ---------- FOOTER ---------- */
-  .footer { background-color: var(--background-footer); }
+  .footer { 
+    background-color: var(--background-footer); 
+  }
+
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
-    padding: 3rem 0 1.5rem;
+    padding: 6rem 0 1.5rem;
   }
-  .footer-cta { flex-direction: row; gap: 1rem; align-items: center; }
+  .footer-cta { flex-direction: row; gap: 2rem; align-items: center; }
+
   .footer-rule { display: block; }
 
   .footer-main {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.5fr 0.7fr 0.7fr 0.7fr;
+    gap: calc(5rem + 2vw);
     align-items: start;
-    padding: 2rem 0 2.5rem;
+    padding: calc(2rem + 0.5vw) 0 calc(2rem + 2vw);
   }
-  .footer-links { display: contents; } /* as colunas ocupam as 3 últimas colunas */
-  .footer-col h4 { margin: 0 0 .9rem; font-size: 1.05rem; font-weight: 700; }
-  .footer-col ul { margin: 0; padding: 0; list-style: none; }
-  .footer-col li + li { margin-top: .85rem; }
-  .footer-col a { color: var(--button-color); text-decoration: none; }
+  .footer-links { display: contents; }
 
-  .newsletter-subscribe { padding-right: 2rem; }
+  .footer-col h4 { margin: 0 0 .9rem; }
+
+  .footer-col ul { margin: 0; padding: 0; }
+
+  .footer-col li + li { margin-top: .85rem; }
+
+  .footer-col a { color: var(--button-color); }
+
+  .newsletter-subscribe { margin-right: -0.5rem; } /* Ajuste fino para fidelidade ao Design Desktop */
 
   .footer-bottom {
     display: grid;

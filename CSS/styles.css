@@ -10,12 +10,11 @@
   --text-black-color: #000;
   --text-white-color: #fff;
   --text-gray-color: #757b8a;
-  --text-blue-color: #2a85ff;
   --text-link-color: #2282a1;
   --tittle-color: #101010;
 
   --poppins-font: "Poppins", sans-serif;
-  --inter-font: "Inter", sans-serif;
+  --inter-font: "Inter", sans-serif; /* Usaria para Item 4 da Grid de Our Work */
 }
 
 /* Configurações Estruturação Inicial */
@@ -60,7 +59,7 @@ ul li {
   box-sizing: border-box;
 }
 
-/* Header */
+/* HEADER */
 
 .header-inner {
   display: flex;
@@ -84,7 +83,7 @@ ul li {
   display: none;
 }
 
-/* Hero */
+/* HERO */
 
 .hero {
   padding: 1.4rem 0;
@@ -118,7 +117,7 @@ ul li {
   align-items: center;
 }
 
-/* About Us */
+/* ABOUT US */
 
 .aboutus {
   padding: 1.3rem 0 1.8rem 0;
@@ -214,7 +213,7 @@ ul li {
   align-items: center;
 }
 
-/* Our Work */
+/* OUR WORK */
 
 .ourwork {
   background-color: var(--background-ourwork);
@@ -276,11 +275,11 @@ ul li {
   padding-left: 0.5vw;
 }
 
-/* Grid de Itens da Seção */
+/* Grid de Itens */
 
 .our-work-grid {
   display: grid;
-  grid-template-columns: 1fr; /* mobile: 1 coluna */
+  grid-template-columns: 1fr;
   gap: 2.5rem;
 }
 
@@ -338,13 +337,7 @@ ul li {
   display: none;
 }
 
-/* Proporção imagens
-.work-item.size-a .media-item { aspect-ratio: 2.33 / 3; }
-.work-item.size-b .media-item { aspect-ratio: 4 / 4.15; }
-
-*/
-
-/* Seção Testimonials */
+/* TESTIMONIALS */
 
 .testimonials {
   background: var(--bg);
@@ -359,7 +352,7 @@ ul li {
   align-items: start;
 }
 
-/* LEFT: título + lead */
+/* Conteúdo Antecessor ao Card */
 .testimonials-left h2 {
   font-weight: 600;
   font-size: clamp(2.5rem, 5vw, 5rem);
@@ -377,11 +370,11 @@ ul li {
   max-width: 60ch;
 }
 
-/* RIGHT: testimonial card */
+/* Card do Testemunho */
 .testimonial-card {
   position: relative;
   background: transparent;
-  padding: 0; /* conteúdo já alinhado */
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -394,14 +387,12 @@ ul li {
   gap: 1rem;
 }
 
-/* quote mark - mobile: pequena e inline acima do texto */
 .quote-mark {
   width: clamp(48px, calc(33.92px + 3.7547vw), 88px);
   height: auto;
   display: block;
 }
 
-/* o texto do depoimento */
 .testimonial-text {
   margin: 0;
   font-size: clamp(1.25rem, 3.2vw, 2rem);
@@ -414,7 +405,6 @@ ul li {
   margin-bottom: calc(1rem + 2.5vw);
 }
 
-/* author box */
 .testimonial-author {
   display: flex;
   align-items: center;
@@ -447,7 +437,7 @@ ul li {
   text-decoration: underline;
 }
 
-/* Footer */
+/* FOOTER */
 
 .footer {
   background: var(--background-color);
@@ -599,28 +589,19 @@ ul li {
   border: 0;
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE DA PÁGINA */
 
-@media (min-width: 1024px) {
-  .container-wide {
-    width: min(87%, 1200px);
-  }
-}
-
-/* ------------------------------
-   TABLET (>= 768px)
-   ajustes leves: logos grid, increased gaps
-   ------------------------------ */
+/* TABLET (Versão intermediária entre Mobile e Desktop) */
 @media (min-width: 768px) {
 
-  /* About / companies list: use auto-fit para ficar robusto */
+  /* ABOUT US */
   .companies-list {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     gap: 2rem;
   }
 
-  /* Our Work: mais gap em tablet */
+  /* OUR WORK */
   .our-work-grid {
     gap: 3rem;
   }
@@ -631,13 +612,16 @@ ul li {
   }
 }
 
-/* ------------------------------
-   DESKTOP BASE (>= 1024px)
-   Aqui construímos o layout desktop "funcional"
-   ------------------------------ */
+/* DESKTOP BASE (Versão Base para o Padrão de Desktop) */
+
 @media (min-width: 1024px) {
 
-  /* ---------- HEADER: trocar menu mobile por desktop ---------- */
+  /* ---------- CONTAINER ---------- */
+  .container-wide {
+    width: min(87%, 1200px);
+  }
+
+  /* ---------- HEADER ---------- */
   .menu-mobile { display: none; }
 
   .header-left {
@@ -679,7 +663,7 @@ ul li {
     text-decoration: none;
   }
 
-  /* ---------- HERO: layout em grid 2-col (texto + media) ---------- */
+  /* ---------- HERO ---------- */
   .hero .hero-content {
     align-items: start;
     width: 100%;
@@ -746,7 +730,7 @@ ul li {
     margin-bottom: 0;
   }
 
-  /* ---------- OUR WORK: 2 col grid ---------- */
+  /* ---------- OUR WORK ---------- */
 
   .ourwork {
     padding: 3.5rem 0 0rem 0;
@@ -799,7 +783,7 @@ ul li {
     margin-top: calc(-1.2rem - 9vw);
   }
 
-  /* ---------- TESTIMONIALS: aspas deslocada ---------- */
+  /* ---------- TESTIMONIALS ---------- */
   .testimonial-content { 
     position: relative;  
   }
@@ -827,60 +811,24 @@ ul li {
     display: flex;
     flex-direction: column;
     padding-left: calc(3rem + 0.5vw);
-    gap: 3rem;
   }
 
-
-  
   .quote-mark {
     position: absolute;
     left: 0;
     top: 0;
     width: 70px;
     height: auto;
-    transform: translateY(130%);
+    transform: translateY(60%);
   
-  }
-
-  .testimonial-text {
-    margin: 0;
-    max-width: 70ch; /* desktop permite fluidez */
   }
   
   .testimonial-author {
-    display: flex;
-    align-items: center;
     padding-left: calc(3rem + 0.5vw);
-    gap: 1.25rem;
   }
+  
 
-  .author-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 999px;
-    object-fit: cover;
-    background: #f3f4f6;
-  }
-
-  .author-name {
-    margin: 0;
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--text);
-  }
-
-  .author-role {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--muted);
-  }
-
-  .author-link {
-    color: #2282a1;
-    text-decoration: underline;
-  }
-
-  /* ---------- FOOTER: top row + main grid ---------- */
+  /* ---------- FOOTER ---------- */
   .footer { background-color: var(--background-footer); }
   .footer-top {
     flex-direction: row;

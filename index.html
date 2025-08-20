@@ -20,9 +20,7 @@
   <body>
     <header>
       <div class="header-inner container-wide">
-
         <div class="header-left">
-
           <div class="logo">
             <a href="#">
               <picture>
@@ -42,39 +40,32 @@
           </div>
 
           <nav>
-
             <div class="menu-desktop left">
               <a href="#" id="about-link">About</a>
               <a href="#">Blog</a>
               <a href="#">Contact</a>
             </div>
-
           </nav>
-
         </div>
 
         <div class="header-right">
-
           <nav>
-
             <div class="menu-mobile">
-
               <button
                 id="menu-toggle"
                 onclick="toggleMenu()"
                 aria-label="Open mobile menu"
-                >
+              >
                 <img
                   src="/resources/icons/hamburguer-menu.svg"
                   alt="Button Toggle"
                 />
               </button>
             </div>
-            
+
             <div class="menu-desktop right">
               <a href="#">Sign In</a>
             </div>
-  
           </nav>
         </div>
       </div>
@@ -104,7 +95,9 @@
             <!-- Imagem para desktop -->
             <source
               media="(min-width: 1024px)"
-              srcset="/resources/images/desktop-version/hero-video-desktop-svg.svg"
+              srcset="
+                /resources/images/desktop-version/hero-video-desktop-svg.svg
+              "
             />
             <!-- Imagem para mobile -->
             <img
@@ -151,17 +144,15 @@
               <div class="office-text">
                 <p>Our office is always open to having you anytime</p>
               </div>
-
             </div>
 
             <!-- Dividindo as Logos -->
 
             <div class="title-list">
-                <h3>Trusted by great companies</h3>
+              <h3>Trusted by great companies</h3>
             </div>
 
             <div class="companies-list">
-
               <div class="company-item">
                 <img
                   src="/resources/images/mobile-version/logo-canon.png"
@@ -214,12 +205,11 @@
             <h2>Explore What We Have Done</h2>
 
             <div class="mid-content">
-
               <p class="mid-text">
-                Decisioning platforms can help you make decisions faster than ever
-                before—and often with less effort—by giving you access to all of
-                your current data in one place so that it's easy to find what you
-                need when it's needed most!
+                Decisioning platforms can help you make decisions faster than
+                ever before—and often with less effort—by giving you access to
+                all of your current data in one place so that it's easy to find
+                what you need when it's needed most!
               </p>
 
               <div class="ourwork-link">
@@ -229,7 +219,6 @@
                   src="resources/icons/arrow-up-right-blue.svg"
                   alt="Arrow Right Icon"
                 />
-
               </div>
             </div>
           </div>
@@ -244,9 +233,7 @@
               <picture>
                 <source
                   media="(min-width:768px)"
-                  srcset="
-                    resources/images/desktop-version/ourwork-image1.png
-                  "
+                  srcset="resources/images/desktop-version/ourwork-image1.png"
                 />
                 <img
                   src="resources/images/mobile-version/ourwork-image1.png"
@@ -276,9 +263,7 @@
               <picture>
                 <source
                   media="(min-width:768px)"
-                  srcset="
-                    resources/images/desktop-version/ourwork-image2.png
-                  "
+                  srcset="resources/images/desktop-version/ourwork-image2.png"
                 />
                 <img
                   src="resources/images/mobile-version/ourwork-image2.png"
@@ -371,14 +356,21 @@
               class="testimonial-card"
               aria-labelledby="testimonial-heading"
             >
-              <div class="testimonial-content">
+              <picture>
+                <source
+                  media="(min-width:1024px)"
+                  srcset="/resources/icons/quotes-desktop.svg"
+                />
                 <img
                   src="/resources/icons/quotes.svg"
                   alt="Ícone de Aspas"
                   class="quote-mark"
                   aria-hidden="true"
                 />
-                <p id="testimonial-heading" class="testimonial-text">
+              </picture>
+
+              <div class="testimonial-content">
+                <p class="testimonial-text">
                   Coca It's not just for data scientists! Analytics is for
                   everyone from executives to marketers to salespeople. More
                   than half of our customers say that analytics has helped them
@@ -387,20 +379,20 @@
               </div>
 
               <div class="testimonial-author">
-                <img
-                  src="/resources/images/mobile-version/senior-director.png"
-                  alt="Anthony Klok"
-                  class="author-avatar"
-                  loading="lazy"
-                />
-                <div class="author-info">
-                  <h3 class="author-name">Anthony Klok</h3>
-                  <p class="author-role">
-                    Senior Director of Engineering at
-                    <a href="#" class="author-link">Sans Brothers</a>
-                  </p>
+                  <img
+                    src="/resources/images/mobile-version/senior-director.png"
+                    alt="Anthony Klok"
+                    class="author-avatar"
+                    loading="lazy"
+                  />
+                  <div class="author-info">
+                    <h3 class="author-name">Anthony Klok</h3>
+                    <p class="author-role">
+                      Senior Director of Engineering at
+                      <a href="#" class="author-link">Sans Brothers</a>
+                    </p>
+                  </div>
                 </div>
-              </div>
             </aside>
           </div>
         </div>

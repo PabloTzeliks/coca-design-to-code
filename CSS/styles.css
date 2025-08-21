@@ -420,7 +420,7 @@ ul li {
 }
 
 .author-name {
-  font-size: clamp(1.22rem, 1.61vw, 2.5rem);
+  font-size: clamp(1.22rem, 1.61vw, 1.6rem);
   margin: 0;
   font-weight: 700;
 }
@@ -785,6 +785,7 @@ ul li {
   }
 
   /* ---------- TESTIMONIALS ---------- */
+  
   .testimonial-content {
     position: relative;
   }
@@ -1001,6 +1002,10 @@ ul li {
     margin-bottom: 2.1rem;
   }
 
+  .desktop--only.size-a {
+    margin-top: calc(-4.5rem - 5vw);
+  }
+
   /* ---------- TESTIMONIALS ---------- */
 
   .testimonials {
@@ -1051,10 +1056,19 @@ ul li {
   }
 
   .newsletter-subscribe {
-    max-width: calc(160px + 9vw);
+    max-width: calc(260px + 2vw);
   } /* Ajuste fino para fidelidade ao Design Desktop */
 
   .footer-bottom {
     padding: 2rem 0 3rem;
   }
+}
+
+/* DESKTOP AJUSTE (>= 1980px) */
+@media (min-width: 1440px) {
+
+  .desktop--only.size-a {
+    margin-top: calc(-4.2rem - 4vw);
+  }
+
 }

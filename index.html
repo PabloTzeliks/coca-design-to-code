@@ -8,12 +8,12 @@
 
     <link rel="stylesheet" href="CSS/styles.css" />
 
-    <!-- Fonte Poppins e Inter importação via Google Fonts -->
+    <!-- Fonte Poppins importação via Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -39,7 +39,7 @@
             </a>
           </div>
 
-          <nav>
+          <nav aria-label="Left Menu">
             <div class="menu-desktop left">
               <a href="#" id="about-link">About</a>
               <a href="#">Blog</a>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="header-right">
-          <nav>
+          <nav aria-label="Right Menu">
             <div class="menu-mobile">
               <button
                 id="menu-toggle"
@@ -87,12 +87,14 @@
 
         <div class="hero-video container-wide">
           <picture>
-            <!-- Imagem para desktop -->
+            <!-- Imagem para desktop Full -->
             <source
               media="(min-width: 1440px)"
-              srcset="/resources/images/desktop-version/video-hero-desktop-svg-1440.svg"
+              srcset="
+                /resources/images/desktop-version/video-hero-desktop-svg-1440.svg
+              "
             />
-            <!-- Imagem para desktop -->
+            <!-- Imagem para desktop Laptop -->
             <source
               media="(min-width: 1024px)"
               srcset="
@@ -227,6 +229,7 @@
         <!-- Dividindo os Itens da Section Our Work -->
 
         <div class="our-work-grid container-wide">
+
           <!-- Card 1 -->
           <article class="work-item size-a">
             <div class="media-item">
@@ -340,6 +343,7 @@
       <section class="testimonials">
         <div class="container">
           <div class="testimonials-inner">
+
             <!-- Coluna da esquerda -->
             <div class="testimonials-left">
               <h2>Why Coca Agency?</h2>
@@ -379,25 +383,26 @@
               </div>
 
               <div class="testimonial-author">
-                  <img
-                    src="/resources/images/mobile-version/senior-director.png"
-                    alt="Anthony Klok"
-                    class="author-avatar"
-                    loading="lazy"
-                  />
-                  <div class="author-info">
-                    <h3 class="author-name">Anthony Klok</h3>
-                    <p class="author-role">
-                      Senior Director of Engineering at
-                      <a href="#" class="author-link">Sans Brothers</a>
-                    </p>
-                  </div>
+                <img
+                  src="/resources/images/mobile-version/senior-director.png"
+                  alt="Anthony Klok"
+                  class="author-avatar"
+                  loading="lazy"
+                />
+                <div class="author-info">
+                  <h3 class="author-name">Anthony Klok</h3>
+                  <p class="author-role">
+                    Senior Director of Engineering at
+                    <a href="#" class="author-link">Sans Brothers</a>
+                  </p>
                 </div>
+              </div>
             </aside>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-top">

@@ -1,0 +1,20 @@
+{
+  "name": "coca-design-to-code",
+  "version": "1.0.0",
+  "description": "A repository created to store an exam project for the Curricular Unit Front-End Coding. The main objective of this exam is to replicate a Figma design into a static web page using HTML5 and CSS3, applying responsive design principles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:css:fix": "stylelint '**/*.css' --fix",
+    "format": "prettier --write '**/*.{html,css,js,json}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard": "^39.0.0"
+  }
+}

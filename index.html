@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Coke</title>
+    <meta name="description" content="Esta é uma página que mostra como replicar um design do Figma usando HTML e CSS com responsividade.">
+    
+    <title>Coca Agency</title>
 
     <link rel="stylesheet" href="CSS/styles.css" />
 
@@ -24,11 +26,13 @@
           <div class="logo">
             <a href="#">
               <picture>
+
                 <!-- Imagem para desktop -->
                 <source
                   media="(min-width: 1024px)"
                   srcset="/resources/icons/logo-coca-desktop.svg"
                 />
+
                 <!-- Imagem para mobile -->
                 <img
                   src="/resources/icons/logo-coca.svg"
@@ -55,6 +59,8 @@
                 id="menu-toggle"
                 onclick="toggleMenu()"
                 aria-label="Open mobile menu"
+                aria-controls="menu-mobile"
+                aria-expanded="false"
               >
                 <img
                   src="/resources/icons/hamburguer-menu.svg"
@@ -76,17 +82,30 @@
         <div id="background-elements">
           <picture>
 
+            <!-- Imagem para desktop 1980px -->
+            <source
+              media="(min-width: 1880px)"
+              srcset="
+                /resources/images/desktop-version/background-elements-1980.svg
+              "
+            />
+
             <!-- Imagem para desktop 1440px -->
             <source
               media="(min-width: 1368px)"
-              srcset="/resources/images/desktop-version/background-elements-1440.svg"
+              srcset="
+                /resources/images/desktop-version/background-elements-1440.svg
+              "
             />
 
             <!-- Imagem para desktop 1024px -->
             <source
               media="(min-width: 1024px)"
-              srcset="/resources/images/desktop-version/background-elements-1024.svg"
+              srcset="
+                /resources/images/desktop-version/background-elements-1024.svg
+              "
             />
+
             <!-- Imagem para mobile -->
             <img
               src="/resources/images/mobile-version/bacground-elements-mobile.svg"
@@ -94,7 +113,7 @@
             />
           </picture>
         </div>
-        
+
         <div class="container">
           <div class="hero-content">
             <h1 class="title">Analytic Decisioning</h1>
@@ -134,7 +153,6 @@
             <img
               src="/resources/images/mobile-version/video-hero-mobile-svg.svg"
               alt="Video of Coca Agency"
-              id="video-hero"
             />
           </picture>
         </div>
@@ -161,7 +179,8 @@
 
                 <img
                   src="resources/icons/arrow-up-right-blue.svg"
-                  alt="Arrow Right Icon"
+                  alt="Arrow Icon"
+                  aria-hidden="true"
                 />
               </div>
 
@@ -248,7 +267,8 @@
 
                 <img
                   src="resources/icons/arrow-up-right-blue.svg"
-                  alt="Arrow Right Icon"
+                  alt="Arrow Icon"
+                  aria-hidden="true"
                 />
               </div>
             </div>
@@ -283,7 +303,8 @@
 
                 <img
                   src="resources/icons/arrow-up-right-blue.svg"
-                  alt="Arrow Right Icon"
+                  alt="Arrow Icon"
+                  aria-hidden="true"
                 />
               </div>
             </div>
@@ -313,14 +334,15 @@
 
                 <img
                   src="resources/icons/arrow-up-right-blue.svg"
-                  alt="Arrow Right Icon"
+                  alt="Arrow Icon"
+                  aria-hidden="true"
                 />
               </div>
             </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="work-item size-b desktop--only">
+          <article class="work-item size-b desktop-only">
             <!-- Itens presentes únicos do Desktop, não aparecem no Mobile -->
 
             <div class="media-item">
@@ -338,14 +360,15 @@
 
                 <img
                   src="resources/icons/arrow-up-right-blue.svg"
-                  alt="Arrow Right Icon"
+                  alt="Arrow Icon"
+                  aria-hidden="true"
                 />
               </div>
             </div>
           </article>
 
           <!-- Card 4 -->
-          <article class="work-item size-a desktop--only">
+          <article class="work-item size-a desktop-only">
             <div class="media-item">
               <img
                 src="resources/images/desktop-version/item-desktop-ourwork-right.png"
@@ -361,7 +384,8 @@
 
                 <img
                   src="resources/icons/arrow-up-right-blue.svg"
-                  alt="Arrow Right Icon"
+                  alt="Arrow Icon"
+                  aria-hidden="true"
                 />
               </div>
             </div>
@@ -387,7 +411,8 @@
             <!-- Coluna da Direita -->
             <aside
               class="testimonial-card"
-              aria-labelledby="testimonial-heading"
+              role="complementary"
+              aria-labelledby="testimonial"
             >
               <picture>
                 <source
@@ -403,7 +428,7 @@
               </picture>
 
               <div class="testimonial-content">
-                <p class="testimonial-text">
+                <p id="testimonial" class="testimonial-text">
                   Coca It's not just for data scientists! Analytics is for
                   everyone from executives to marketers to salespeople. More
                   than half of our customers say that analytics has helped them

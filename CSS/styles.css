@@ -4,15 +4,12 @@
   --background-color: #fff;
   --background-ourwork: #22252c;
   --background-footer: #f5f5f5;
-
   --button-color: #101010;
-
   --text-black-color: #000;
   --text-white-color: #fff;
   --text-gray-color: #757b8a;
   --text-link-color: #2282a1;
   --tittle-color: #101010;
-
   --poppins-font: "Poppins", sans-serif;
 }
 
@@ -54,7 +51,7 @@ ul li {
 
 .container-wide {
   width: min(89%, 1200px);
-  margin: calc(0.7rem + 0.6vw) auto 0 auto;
+  margin: calc(0.7rem + 0.6vw) auto 0;
   box-sizing: border-box;
 }
 
@@ -91,28 +88,20 @@ ul li {
 }
 
 #background-elements {
-    display: none !important;
-    position: absolute;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    z-index: 0;
+  display: none !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
-  /* Conteúdo da hero e vídeo acima do background */
+/* Conteúdo da hero e vídeo acima do background */
 .hero .container,
 .hero .hero-content,
 .hero-video {
   position: relative;
   z-index: 2;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: start;
 }
 
 .hero-content h1 {
@@ -138,7 +127,7 @@ ul li {
 /* ABOUT US */
 
 .aboutus {
-  padding: 1.3rem 0 1.8rem 0;
+  padding: 1.3rem 0 1.8rem;
   width: 100%;
 }
 
@@ -228,7 +217,6 @@ ul li {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 4.5rem);
   justify-items: center;
-  align-items: center;
 }
 
 /* OUR WORK */
@@ -236,7 +224,7 @@ ul li {
 .ourwork {
   background-color: var(--background-ourwork);
   color: var(--text-white-color);
-  padding: 3.5rem 0 4.6rem 0;
+  padding: 3.5rem 0 4.6rem;
 }
 
 .ourwork-content {
@@ -308,12 +296,17 @@ ul li {
   gap: 1.2rem;
 }
 
+/* Itens do Desktop */
+.desktop-only {
+  display: none;
+}
+
 /* Apenas para o Segundo Item do Mobile */
 .work-item.size-b {
   margin-top: calc(0.5rem + 2.4vw);
 }
 
-.work-item .desktop--only {
+.work-item .desktop-only {
   margin-top: calc(3rem + 2.5vw);
 }
 
@@ -343,16 +336,12 @@ ul li {
   overflow: hidden;
   background: #000;
 }
+
 .media-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-/* Itens do Desktop */
-.desktop--only {
-  display: none;
 }
 
 /* TESTIMONIALS */
@@ -461,6 +450,7 @@ ul li {
   background: var(--background-color);
   color: var(--text-black-color);
 }
+
 .footer .container {
   width: min(87%, 1200px);
   margin: 0 auto;
@@ -486,12 +476,14 @@ ul li {
   gap: 0.9rem;
   align-items: center;
 }
+
 .cta-text {
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
   color: var(--button-color);
 }
+
 .btn-getstarted {
   display: inline-block;
   background: var(--button-color);
@@ -526,12 +518,15 @@ ul li {
   max-width: 15ch;
   color: var(--button-color);
 }
+
 .email-form {
   max-width: 420px;
 }
+
 .input-group {
   position: relative;
 }
+
 .email-input {
   width: 100%;
   background: transparent;
@@ -544,6 +539,7 @@ ul li {
   color: #757b8a;
   outline: none;
 }
+
 .submit-button {
   display: flex;
   justify-content: center;
@@ -573,22 +569,26 @@ ul li {
   padding: 1.8rem 0 2.5rem;
   align-items: center;
 }
+
 .legal {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
+
 .legal a {
   color: #33353e;
   text-decoration: none;
   font-weight: 500;
 }
+
 .social {
   display: flex;
   justify-content: center;
   gap: 2.3rem;
 }
+
 .social img {
   width: 24px;
   height: 24px;
@@ -602,7 +602,6 @@ ul li {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
@@ -612,24 +611,33 @@ ul li {
 /* ELEMENTO (Versões onde os elementos são visiveis) */
 
 @media (min-width: 345px) and (max-width: 405px) {
-  #background-elements { display: block !important; }
+  #background-elements {
+    display: block !important;
+  }
 }
 
 @media (min-width: 729px) and (max-width: 806px) {
-  #background-elements { 
+  #background-elements {
     display: block !important;
   }
 }
 
 @media (min-width: 962px) and (max-width: 1076px) {
-  #background-elements { 
+  #background-elements {
     display: block !important;
     top: 17.4%;
   }
 }
 
 @media (min-width: 1368px) and (max-width: 1550px) {
-  #background-elements { 
+  #background-elements {
+    display: block !important;
+    top: 17.4%;
+  }
+}
+
+@media (min-width: 1880px) and (max-width: 2080px) {
+  #background-elements {
     display: block !important;
     top: 17.4%;
   }
@@ -644,6 +652,7 @@ ul li {
 }
 
 /* TABLET (Versão intermediária entre Mobile e Desktop) */
+
 @media (min-width: 768px) {
   /* ABOUT US */
   .companies-list {
@@ -744,22 +753,23 @@ ul li {
     width: calc(
       100vw - (1.2rem + 6.2vw)
     ); /* Tentativa de deixar a imagem colada a direita (talvez não seja o ideal, mas foi o que consegui pensar) */
+    
     margin-right: 0;
   }
 
   /* About Us */
 
   .aboutus {
-    padding: 3.5rem 0 5rem 0;
+    padding: 3.5rem 0 5rem;
+  }
+
+  .introduction p {
+    max-width: 60ch;
   }
 
   .introduction h2 {
     max-width: 20ch;
     margin-bottom: 3rem;
-  }
-
-  .introduction p {
-    max-width: 60ch;
   }
 
   .about-office {
@@ -785,7 +795,7 @@ ul li {
   /* ---------- OUR WORK ---------- */
 
   .ourwork {
-    padding: 3.5rem 0 0rem 0;
+    padding: 3.5rem 0 0;
   }
 
   .ourwork-content {
@@ -829,11 +839,12 @@ ul li {
   .work-item.size-b {
     margin-top: 0;
   }
-  .desktop--only {
+
+  .desktop-only {
     display: flex;
   }
 
-  .desktop--only.size-a {
+  .desktop-only.size-a {
     margin-top: calc(-1.2rem - 9vw);
   }
 
@@ -892,6 +903,7 @@ ul li {
     text-align: left;
     padding: 6rem 0 1.5rem;
   }
+
   .footer-cta {
     flex-direction: row;
     gap: 2rem;
@@ -909,6 +921,7 @@ ul li {
     align-items: start;
     padding: calc(2rem + 0.5vw) 0 calc(2rem + 2vw);
   }
+
   .footer-links {
     display: contents;
   }
@@ -938,11 +951,13 @@ ul li {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    padding: 2rem 0 3rem;
+    padding: 2rem 0 5rem;
   }
+
   .legal {
     justify-content: flex-start;
   }
+
   .social {
     justify-content: flex-end;
   }
@@ -1059,7 +1074,7 @@ ul li {
     padding: 0;
   }
 
-  .desktop--only.size-a {
+  .desktop-only.size-a {
     margin-top: calc(-5rem - 4.5vw);
   }
 
@@ -1114,25 +1129,25 @@ ul li {
 
   .newsletter-subscribe {
     max-width: calc(260px + 2vw);
-  } /* Ajuste fino para fidelidade ao Design Desktop */
+  } 
+  
+  /* Ajuste fino para fidelidade ao Design Desktop */
 
   .footer-bottom {
-    padding: 2rem 0 3rem;
+    padding: 2rem 0 6rem;
   }
 }
 
 /* DESKTOP AJUSTE (>= 1980px) */
 @media (min-width: 1980px) {
-  .desktop--only.size-a {
+  .desktop-only.size-a {
     margin-top: calc(-4.6rem - 3.5vw);
   }
 }
 
 /* DESKTOP AJUSTE (>= 2560px) */
 @media (min-width: 2560px) {
-  .desktop--only.size-a {
+  .desktop-only.size-a {
     margin-top: calc(-3.4rem - 3.5vw);
   }
 }
-
-/* ELEMENTOS DE BACKGROUND (ELIPSE E SETA) APENAS PARA DETALHE */

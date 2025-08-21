@@ -1002,8 +1002,12 @@ ul li {
     margin-bottom: 2.1rem;
   }
 
+  .work-item .size-b {
+    padding: 0;
+  }
+
   .desktop--only.size-a {
-    margin-top: calc(-4.5rem - 5vw);
+    margin-top: calc(-5rem - 4.5vw);
   }
 
   /* ---------- TESTIMONIALS ---------- */
@@ -1065,10 +1069,19 @@ ul li {
 }
 
 /* DESKTOP AJUSTE (>= 1980px) */
-@media (min-width: 1440px) {
+@media (min-width: 1980px) {
 
   .desktop--only.size-a {
-    margin-top: calc(-4.2rem - 4vw);
+    margin-top: calc(-4.6rem - 3.5vw);
+  }
+
+}
+
+/* DESKTOP AJUSTE (>= 2560px) */
+@media (min-width: 2560px) {
+
+  .desktop--only.size-a {
+    margin-top: calc(-3.4rem - 3.5vw);
   }
 
 }

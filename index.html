@@ -73,6 +73,28 @@
 
     <main>
       <section class="hero">
+        <div id="background-elements">
+          <picture>
+
+            <!-- Imagem para desktop 1440px -->
+            <source
+              media="(min-width: 1368px)"
+              srcset="/resources/images/desktop-version/background-elements-1440.svg"
+            />
+
+            <!-- Imagem para desktop 1024px -->
+            <source
+              media="(min-width: 1024px)"
+              srcset="/resources/images/desktop-version/background-elements-1024.svg"
+            />
+            <!-- Imagem para mobile -->
+            <img
+              src="/resources/images/mobile-version/bacground-elements-mobile.svg"
+              alt="Background Elements"
+            />
+          </picture>
+        </div>
+        
         <div class="container">
           <div class="hero-content">
             <h1 class="title">Analytic Decisioning</h1>

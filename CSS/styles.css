@@ -86,6 +86,25 @@ ul li {
 
 .hero {
   padding: 1.4rem 0;
+  position: relative;
+  overflow: visible;
+}
+
+#background-elements {
+    display: none !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+  /* Conteúdo da hero e vídeo acima do background */
+.hero .container,
+.hero .hero-content,
+.hero-video {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
@@ -590,6 +609,40 @@ ul li {
 
 /* RESPONSIVIDADE DA PÁGINA */
 
+/* ELEMENTO (Versões onde os elementos são visiveis) */
+
+@media (min-width: 345px) and (max-width: 405px) {
+  #background-elements { display: block !important; }
+}
+
+@media (min-width: 729px) and (max-width: 806px) {
+  #background-elements { 
+    display: block !important;
+  }
+}
+
+@media (min-width: 962px) and (max-width: 1076px) {
+  #background-elements { 
+    display: block !important;
+    top: 17.4%;
+  }
+}
+
+@media (min-width: 1368px) and (max-width: 1550px) {
+  #background-elements { 
+    display: block !important;
+    top: 17.4%;
+  }
+}
+
+/* AJUSTE MOBILE (ajuste para o titulo não quebrar a página */
+
+@media (max-width: 370px) {
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+}
+
 /* TABLET (Versão intermediária entre Mobile e Desktop) */
 @media (min-width: 768px) {
   /* ABOUT US */
@@ -785,7 +838,7 @@ ul li {
   }
 
   /* ---------- TESTIMONIALS ---------- */
-  
+
   .testimonial-content {
     position: relative;
   }
@@ -1070,18 +1123,16 @@ ul li {
 
 /* DESKTOP AJUSTE (>= 1980px) */
 @media (min-width: 1980px) {
-
   .desktop--only.size-a {
     margin-top: calc(-4.6rem - 3.5vw);
   }
-
 }
 
 /* DESKTOP AJUSTE (>= 2560px) */
 @media (min-width: 2560px) {
-
   .desktop--only.size-a {
     margin-top: calc(-3.4rem - 3.5vw);
   }
-
 }
+
+/* ELEMENTOS DE BACKGROUND (ELIPSE E SETA) APENAS PARA DETALHE */

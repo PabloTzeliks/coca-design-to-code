@@ -14,7 +14,6 @@
   --tittle-color: #101010;
 
   --poppins-font: "Poppins", sans-serif;
-  --inter-font: "Inter", sans-serif; /* Usaria para Item 4 da Grid de Our Work */
 }
 
 /* Configurações Estruturação Inicial */
@@ -421,14 +420,14 @@ ul li {
 }
 
 .author-name {
-  font-size: clamp(1.22rem, 2.5vw, 2rem);
+  font-size: clamp(1.22rem, 1.61vw, 2.5rem);
   margin: 0;
   font-weight: 700;
 }
 
 .author-role {
   margin: 0;
-  font-size: clamp(0.86rem, 1.5vw, 1.3rem);
+  font-size: clamp(0.86rem, 1.25vw, 1.3rem);
   color: var(--muted);
 }
 
@@ -593,7 +592,6 @@ ul li {
 
 /* TABLET (Versão intermediária entre Mobile e Desktop) */
 @media (min-width: 768px) {
-
   /* ABOUT US */
   .companies-list {
     grid-template-columns: repeat(6, 1fr);
@@ -615,14 +613,15 @@ ul li {
 /* DESKTOP BASE (Versão Base para o Padrão de Desktop) */
 
 @media (min-width: 1024px) {
-
   /* ---------- CONTAINER ---------- */
   .container-wide {
     width: min(87%, 1200px);
   }
 
   /* ---------- HEADER ---------- */
-  .menu-mobile { display: none; }
+  .menu-mobile {
+    display: none;
+  }
 
   .header-left {
     display: flex;
@@ -638,7 +637,7 @@ ul li {
   .menu-desktop.left a {
     font-size: 1rem;
     font-weight: 400;
-    color: #757B8A;
+    color: #757b8a;
     text-decoration: none;
   }
 
@@ -689,7 +688,9 @@ ul li {
 
   .hero-video {
     margin-top: -2rem;
-    width: calc(100vw - (1.2rem + 6.2vw)); /* Tentativa de deixar a imagem colada a direita (talvez não seja o ideal, mas foi o que consegui pensar) */
+    width: calc(
+      100vw - (1.2rem + 6.2vw)
+    ); /* Tentativa de deixar a imagem colada a direita (talvez não seja o ideal, mas foi o que consegui pensar) */
     margin-right: 0;
   }
 
@@ -709,12 +710,10 @@ ul li {
   }
 
   .about-office {
-
     flex-direction: row;
     align-items: center;
     gap: 4rem;
     margin-bottom: 10rem;
-
   }
 
   .office-text {
@@ -774,9 +773,11 @@ ul li {
     gap: 1.8rem;
   }
 
-  .work-item.size-b { margin-top: 0; }
-  .desktop--only { 
-    display: flex; 
+  .work-item.size-b {
+    margin-top: 0;
+  }
+  .desktop--only {
+    display: flex;
   }
 
   .desktop--only.size-a {
@@ -784,10 +785,10 @@ ul li {
   }
 
   /* ---------- TESTIMONIALS ---------- */
-  .testimonial-content { 
-    position: relative;  
+  .testimonial-content {
+    position: relative;
   }
-  
+
   .testimonials-inner {
     display: grid;
     grid-template-columns: minmax(calc(350px), calc(450px + 22vw));
@@ -820,17 +821,15 @@ ul li {
     width: 70px;
     height: auto;
     transform: translateY(60%);
-  
   }
-  
+
   .testimonial-author {
     padding-left: calc(3rem + 0.5vw);
   }
-  
 
   /* ---------- FOOTER ---------- */
-  .footer { 
-    background-color: var(--background-footer); 
+  .footer {
+    background-color: var(--background-footer);
   }
 
   .footer-top {
@@ -839,9 +838,15 @@ ul li {
     text-align: left;
     padding: 6rem 0 1.5rem;
   }
-  .footer-cta { flex-direction: row; gap: 2rem; align-items: center; }
+  .footer-cta {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
 
-  .footer-rule { display: block; }
+  .footer-rule {
+    display: block;
+  }
 
   .footer-main {
     display: grid;
@@ -850,17 +855,30 @@ ul li {
     align-items: start;
     padding: calc(2rem + 0.5vw) 0 calc(2rem + 2vw);
   }
-  .footer-links { display: contents; }
+  .footer-links {
+    display: contents;
+  }
 
-  .footer-col h4 { margin: 0 0 .9rem; }
+  .footer-col h4 {
+    margin: 0 0 0.9rem;
+  }
 
-  .footer-col ul { margin: 0; padding: 0; }
+  .footer-col ul {
+    margin: 0;
+    padding: 0;
+  }
 
-  .footer-col li + li { margin-top: .85rem; }
+  .footer-col li + li {
+    margin-top: 0.85rem;
+  }
 
-  .footer-col a { color: var(--button-color); }
+  .footer-col a {
+    color: var(--button-color);
+  }
 
-  .newsletter-subscribe { margin-right: -0.5rem; } /* Ajuste fino para fidelidade ao Design Desktop */
+  .newsletter-subscribe {
+    margin-right: -0.5rem;
+  } /* Ajuste fino para fidelidade ao Design Desktop */
 
   .footer-bottom {
     display: grid;
@@ -868,35 +886,175 @@ ul li {
     align-items: center;
     padding: 2rem 0 3rem;
   }
-  .legal { justify-content: flex-start; }
-  .social { justify-content: flex-end; }
+  .legal {
+    justify-content: flex-start;
+  }
+  .social {
+    justify-content: flex-end;
+  }
 }
 
-/* ------------------------------
-   DESKTOP FINAL (>= 1440px)
-   ajustes finos: gaps maiores, possíveis heights/aspect-ratio fixes para pixel-perfect
-   ------------------------------ */
+/* DESKTOP FINAL (>= 1440px) */
 @media (min-width: 1440px) {
+  /* ---------- HEADER ---------- */
 
-  /* HERO: maior espaço para título e imagem */
+  .header-left {
+    padding-left: 0.2rem;
+    padding-top: 0.3rem;
+    gap: 4rem;
+  }
+
+  .menu-desktop.right a {
+    font-size: 1rem;
+    padding: 0.9rem 2.3rem;
+  }
+
+  /* ---------- HERO ---------- */
+
   .hero {
-    grid-template-columns: 1fr minmax(320px, 30%);
-    gap: clamp(2rem, 6vw, 5rem);
+    padding-top: 0.5rem;
   }
-  .hero-content .title {
-    /* corrigir letter-spacing para um valor pequeno, não -0.5rem */
-    letter-spacing: -0.03rem;
-    line-height: 0.98;
+
+  .hero-content h1 {
+    line-height: 1;
+    letter-spacing: -0.46rem;
   }
-  .hero-arrow { margin-top: 1.6rem; }
-  .hero-video { margin-top: 4.5rem; }
 
-  /* OUR WORK: amplificar gap e (opcional) definir heights para casing pixel-perfect */
-  .our-work-grid { gap: 56px; }
+  .hero .hero-content p {
+    right: 0.1%;
+    width: min(40ch, 400px);
+    transform: translateY(1.5rem);
+  }
 
-  /* Se quiser oferecer heights fixos só em 1440 para bater o mockup:
-     .work-item.size-a .media { height: 540px; aspect-ratio: auto; }
-     .work-item.size-b .media { height: 320px; aspect-ratio: auto; } */
+  .hero-video {
+    margin-top: -0.8rem;
+  }
 
-  .footer-main { gap: 5rem; }
+  /* ---------- ABOUT-US ---------- */
+
+  .aboutus {
+    padding-bottom: 5.8rem;
+  }
+
+  .introduction {
+    padding-top: 1.3rem;
+  }
+
+  .introduction h2 {
+    line-height: 1.175;
+    letter-spacing: 0.02rem;
+    max-width: 20ch;
+    margin-bottom: 4.5rem;
+  }
+
+  .introduction p {
+    margin-bottom: 4rem;
+  }
+
+  .about-office {
+    gap: 5rem;
+    margin-bottom: 10.6rem;
+  }
+
+  .office-text {
+    margin-left: -3.5rem;
+  }
+
+  .title-list {
+    margin-bottom: 3.5rem;
+  }
+
+  /* ---------- OUR-WORK ---------- */
+
+  .ourwork {
+    padding-bottom: 1.5rem;
+  }
+
+  .ourwork-content h2 {
+    line-height: 1;
+    margin-bottom: 3.5rem;
+  }
+
+  .mid-content .mid-text {
+    line-height: 1.8;
+  }
+
+  .ourwork-link {
+    margin-right: 2rem;
+    margin-top: -2.3rem;
+  }
+
+  .main-btn-white {
+    font-size: 1.4rem;
+  }
+
+  .our-work-grid {
+    column-gap: 5rem;
+    row-gap: 8rem;
+  }
+
+  .work-item {
+    gap: 2.5rem;
+  }
+
+  .work-item-text h3 {
+    margin-bottom: 2.1rem;
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+
+  .testimonials {
+    padding-top: 6rem;
+    padding-bottom: 3.4rem;
+  }
+
+  .testimonials-inner {
+    grid-template-columns: minmax(calc(350px), calc(500px + 22vw));
+    gap: calc(3rem + 3vw);
+    align-items: start;
+    align-content: start;
+  }
+
+  .testimonials-left h2 {
+    margin-bottom: 3.5rem;
+  }
+
+  .testimonial-card {
+    padding-left: 6rem;
+  }
+
+  .quote-mark {
+    width: 100px;
+    transform: translateY(40%);
+    padding-left: 0.6rem;
+  }
+
+  .testimonial-content .testimonial-text {
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonial-author {
+    padding-left: calc(3rem + 1.5vw);
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-top {
+    padding: 6.3rem 0 2rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr;
+    padding: calc(2rem + 0.5vw) 0 calc(1rem + 1.3vw);
+    gap: 1rem;
+  }
+
+  .newsletter-subscribe {
+    max-width: calc(160px + 9vw);
+  } /* Ajuste fino para fidelidade ao Design Desktop */
+
+  .footer-bottom {
+    padding: 2rem 0 3rem;
+  }
 }

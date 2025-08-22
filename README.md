@@ -68,8 +68,8 @@ O projeto alcançou excelentes resultados de performance e qualidade:
 * **CSS Variables** - Gerenciamento de tokens de design
 * **Flexbox / Grid** - Sistema de layout moderno
 * **Media Queries** - Implementação da responsividade
-* **Stylelint - configuração em `config/.stylelintrc.json`
-* **Prettier - se configurado
+* **Stylelint** - configuração em `config/.stylelintrc.json`
+* **Prettier** - se configurado
 * **Vercel** - Plataforma de deploy e hospedagem
 
 ---

@@ -24,6 +24,7 @@ Este projeto consiste na conversão fiel de um design do Figma para código HTML
 ## 🚀 Demo
 
 * 🌐 Site Online: [https://cocaagency.vercel.app/](https://cocaagency.vercel.app/)
+* 🎨 Design usado no Figma: [Figma Design](https://www.figma.com/design/oAmuahpvQVUgNo5zV6jLX9/Atividade-Front-End---Replicar-Figma?node-id=0-1&t=hDJICCgtCY3UWF79-1)
 
 ---
 
